@@ -1,0 +1,12 @@
+
+
+* languages
+
+[[file:lang/bash.org][bash]], 
+
+
+
+
+* opt
+
+[[file:opt/emacs.org][emacs]],

@@ -1,0 +1,10 @@
+
+
+* get last directory in path
+
+#+BEGIN_SRC sh
+PTHVAR="/path/to/folder"
+LSTFLDR=$( basename $PTHVAR)
+
+echo $LSTFLDR
+#+END_SRC

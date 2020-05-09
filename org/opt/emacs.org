@@ -1,0 +1,6 @@
+
+* org-publish
+
+** force rebuild sites 
+: C-u M-x org-publish
+from [[https://stackoverflow.com/questions/21258769/using-emacs-org-mode-how-to-publish-the-unchanged-files-in-a-project][stackoverflow.com]].
