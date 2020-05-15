@@ -35,6 +35,10 @@ code drip
 
 : sleep 20m  && systemctl suspend -i
 
+Font: Google Rubik [[https://fonts.google.com/specimen/Rubik][fonts.google.com]]
+as seen for example on [[https://www.rockpapershotgun.com/2019/06/14/cyberpunk-2077s-in-game-context-doesnt-matter-if-its-marketing-contributes-to-transphobia-right-now/][rockpapershotgun.com]]
+
+
 * dev
 
 [[file:dev/git.org][git]],
@@ -53,4 +57,3 @@ code drip
 [[file:test/test_article.org][test article]]
 
 
-#+html: <img src="forest_root.jpg" width="90%" style="display:block;margin:2em auto 2em;">
