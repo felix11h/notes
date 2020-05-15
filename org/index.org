@@ -1,12 +1,53 @@
 
+* sort
+
+#+BEGIN_SRC 
+diff -qr dir1/ dir2/
+git diff --no-index dir1/ dir2/
+#+END_SRC
+
+Docker stop and remove
+#+BEGIN_SRC 
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+#+END_SRC
+
+
+#+BEGIN_SRC 
+du -h -d1 . | grep '[0-9\,]\+G'
+ls -l --block-size=M
+find ./*/builds/*/results -type f -name '*' -exec rm {} +
+find ./*/builds -type d -name '*' -exec rm -rf {} +
+find . -type d -name builds -exec rm -rf {} +
+#+END_SRC
+
+
+rsync
+#+BEGIN_SRC 
+rsync -av --delete --no-p --no-g --chmod=ugo=rwX --exclude=*~ n--exclude=\.\#* --exclude=\.git* /media/fh/44C07FAA1757A143/D/audio/ /media/fh/3463-6330/audio/
+#+END_SRC
+
+code drip 
+ -- levels.fyi
+ -- indiehackers.com
+ -- levels.io
+ -- toptal.com
+
+: sleep 20m  && systemctl suspend -i
+
+* dev
+
+[[file:dev/git.org][git]],
 
 * languages
 
 [[file:lang/bash.org][bash]], 
 
-
-
-
 * opt
 
 [[file:opt/emacs.org][emacs]],
+
+
+* test
+
+[[file:test/test_article.org][test article]]
