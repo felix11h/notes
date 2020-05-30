@@ -1,0 +1,8 @@
+
+* Display current average speed
+
+from [[https://serverfault.com/questions/607689/can-rsync-display-current-average-speed][serverfault.com]]:
+
+#+BEGIN_QUOTE 
+Yes. Starting with rsync version 3.1.0 the ~--info=progress2~ argument will give you progress on the entire transfer, including speed of the entire transfer.
+#+END_QUOTE

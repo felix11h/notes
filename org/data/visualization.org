@@ -1,0 +1,4 @@
+
+* examples
+
+blog explaining concepts using interactive visualization [[http://setosa.io/#/][setosa.io]]

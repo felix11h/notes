@@ -193,14 +193,64 @@ $(function() {
 <div id="content" class="container">
 <div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">get last directory in path</h2>
+<h2 id="sec-">Filling the Gaps</h2>
+</div>
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">Transpiler</h2>
 <div class="outline-text-2" id="text-">
+<p>
+Convert newer language syntax like<br >
+</p>
+
 <div class="org-src-container">
 
-<pre class="src src-sh"><span style="font-weight: bold; font-style: italic;">PTHVAR</span>=<span style="font-style: italic;">"/path/to/folder"</span>
-<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>=$( basename $<span style="font-weight: bold; font-style: italic;">PTHVAR</span>)
+<pre class="src src-javascript"><span style="font-weight: bold;">if</span> (something) {
+    <span style="font-weight: bold;">let</span> <span style="font-weight: bold; font-style: italic;">x</span> = 3;
+    console.log(x);
+}
+<span style="font-weight: bold;">else</span> {
+    <span style="font-weight: bold;">let</span> <span style="font-weight: bold; font-style: italic;">x</span> = 4;
+    console.log(x);
+}
+</pre>
+</div>
 
-<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>
+<p>
+to syntax that is compatible with older versions of the language (since JS is not forward compatible), like<br >
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">x$0</span>, <span style="font-weight: bold; font-style: italic;">x$1</span>;
+<span style="font-weight: bold;">if</span> (something) {
+    x$0 = 3;
+    console.log(x$0);
+}
+<span style="font-weight: bold;">else</span> {
+    x$1 = 4;
+    console.log(x$1);
+}
+</pre>
+</div>
+
+<p>
+Popular choice for JS transpiler: <a href="https://babeljs.io/">babeljs.io</a>.<br >
+</p>
+
+<p>
+<i>Example from You Don't Know JS Yet (book series) - 2nd Edition, Kyle Simpson, <a href="https://github.com/getify/You-Dont-Know-JS">github.com</a>.</i><br >
+</p>
+
+
+
+<p>
+(test)<br >
+</p>
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="font-weight: bold; font-style: italic;">x</span> = b
+<span style="font-weight: bold;">print</span>(<span style="font-style: italic;">"hello world"</span>)
 </pre>
 </div>
 </div>
@@ -208,7 +258,8 @@ $(function() {
 </div><div class="col-md-3"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">get last directory in path</a></li>
+<li><a href="#sec-">Filling the Gaps</a></li>
+<li><a href="#sec-">Transpiler</a></li>
 </ul>
 </div>
 </nav>

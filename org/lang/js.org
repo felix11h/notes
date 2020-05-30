@@ -1,0 +1,48 @@
+
+
+* Dealing with Gaps
+
+** Transpiler
+
+Convert newer language syntax like
+
+#+BEGIN_SRC javascript
+if (something) {
+    let x = 3;
+    console.log(x);
+}
+else {
+    let x = 4;
+    console.log(x);
+}
+#+END_SRC
+
+to syntax that is compatible with older versions of the language (since JS is not forward compatible), like 
+
+#+BEGIN_SRC js
+var x$0, x$1;
+if (something) {
+    x$0 = 3;
+    console.log(x$0);
+}
+else {
+    x$1 = 4;
+    console.log(x$1);
+}
+#+END_SRC
+
+Popular choice for JS transpiler: [[https://babeljs.io/][babeljs.io]]. 
+
+(/Example from You Don't Know JS Yet (book series) - 2nd Edition, Kyle Simpson, [[https://github.com/getify/You-Dont-Know-JS][github.com]]./)
+
+
+** Polyfill ("shim")
+
+
+* Test
+
+(test)
+#+BEGIN_SRC python
+x = b
+print("hello world")
+#+END_SRC

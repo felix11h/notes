@@ -1,0 +1,33 @@
+
+* Paradigms
+
+#+BEGIN_QUOTE 
+Typical paradigm-level code categories include procedural, object-oriented (OO/classes), and functional (FP):
+
+- Procedural style organizes code in a top-down, linear progression through a pre-determined set of operations, usually collected together in related units called procedures.
+
+- OO style organizes code by collecting logic and data together into units called classes.
+
+- FP style organizes code into functions (pure computations as opposed to procedures), and the adaptations of those functions as values.
+#+END_QUOTE
+
+from You Don't Know JS Yet (book series) - 2nd Edition, Kyle Simpson, [[https://github.com/getify/You-Dont-Know-JS][github.com]].
+
+
+
+* Backward and forwards compatibility
+
+Backwards compatibility
+#+BEGIN_QUOTE 
+Code written for older versions of the language still work in new versions of the language.
+#+END_QUOTE
+Example: [[file:js.org][JS]]
+
+Forwards compatibility
+#+BEGIN_QUOTE 
+Code written for new versions of the language are compatible with old versions of the language (e.g. by skipping unrecognized functions).
+#+END_QUOTE
+Example: [[file:html.org][HTML]], [[file:css.org][CSS]]
+
+
+* Static Errors

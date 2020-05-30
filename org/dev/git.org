@@ -1,0 +1,48 @@
+
+* commands
+
+** Change user and email of commit
+#+BEGIN_SRC 
+git
+#+END_SRC
+
+
+** log of subdirectory
+: git log -- path/to/subdir
+
+** ignore file mode (chmod) changes
+: git config core.fileMode false
+
+
+** merge git repository as subdirectory
+
+As described in [[http://stackoverflow.com/a/21495718/692634][Stack Overflow Answer]]:
+
+merge project projA into projB:
+
+~/projB
+
+~/path/to/projA
+
+1. create clone of projA
+
+procedure rewrites history of projA!
+
+2. in ~/path/to/projA_clone
+
+--------------------------------------------------
+PREFIX=subdir/path/in/projB  #adjust this
+
+git filter-branch --index-filter '
+    git ls-files -s |
+    sed "s,\t,&'"$PREFIX"'/," |
+    GIT_INDEX_FILE=$GIT_INDEX_FILE.new git update-index --index-info &&
+    mv $GIT_INDEX_FILE.new $GIT_INDEX_FILE
+' HEAD
+--------------------------------------------------
+
+where PREFIX is adjusted to relative path within ~/projB.
+
+3. Then in ~/projB, simply: 
+
+git pull path/to/A

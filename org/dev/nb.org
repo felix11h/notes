@@ -1,0 +1,63 @@
+
+* Go
+
+** how to not use for loops
+[[https://softwareengineering.stackexchange.com/questions/314150/flow-control-in-go-without-a-for-loop][softwareengineering.stackexchange.com]]: "use channels and goroutines"
+
+** how to test when STDIN is involved
+[[https://stackoverflow.com/questions/46365221/fill-os-stdin-for-function-that-reads-from-it][stackoverflow.com]]
+
+** read multiple integers (without for loop)
+[[https://stackoverflow.com/questions/39565055/read-a-set-of-integers-separated-by-space-in-golang][stackoverflow.com]]
+
+** go strings.NewReader()
+: curl -X POST -d @filename.txt http://example.com/path/to/resource --header "Content-Type:application/json"
+
+https://golang.org/pkg/fmt/#hdr-Scanning
+
+I'm trying to mock stdin with an io.reader and see a difference in behaviour that I don't quite understand. Any input on this would be much appreciated!
+
+My input format is
+    single integer
+    x number of integers
+
+For example
+    4
+    1 2 3 4
+
+I read the first line using fmt.Fscanln(reader, &singleInt). For the second line, I use fmt.Fscanf(reader, "%d", &nextInteger) exactly x times. Now, when the reader is os.stdin, this works exactly as intended. However, when I try to mock stdin with a reader defined, for example as new
+
+
+
+* Visual Studio Code setup
+
+** settings sync to synchronize settings between machines
+[[https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync][marketplace.visualstudio.com]]
+: 1. Upload Key : Shift + Alt + U
+: 2. Download Key : Shift + Alt + D
+
+
+
+* topics Yury mentioned
+
+** Scrumm / Agile
+German guy who wrote about Scrumm, APICs?
+
+** Python
+Generator, Decorator, ...
+
+** Git
+rebase, force push, others
+
+
+* from applications
+
+** REST/RPC APIs?
+
+
+* from meet-up
+
+- load balancer
+- EC2 (Amazon)
+- REST API
+

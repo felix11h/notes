@@ -193,14 +193,28 @@ $(function() {
 <div id="content" class="container">
 <div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">get last directory in path</h2>
+<h2 id="sec-">binary</h2>
 <div class="outline-text-2" id="text-">
-<div class="org-src-container">
+</div><div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">find binary location</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+which okular
+</pre>
+</div>
+</div>
+</div>
 
-<pre class="src src-sh"><span style="font-weight: bold; font-style: italic;">PTHVAR</span>=<span style="font-style: italic;">"/path/to/folder"</span>
-<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>=$( basename $<span style="font-weight: bold; font-style: italic;">PTHVAR</span>)
 
-<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">files</h2>
+<div class="outline-text-2" id="text-">
+</div><div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">diff</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+diff -qr dir1/ dir2/
+git diff --no-index dir1/ dir2/
 </pre>
 </div>
 </div>
@@ -208,7 +222,16 @@ $(function() {
 </div><div class="col-md-3"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">get last directory in path</a></li>
+<li><a href="#sec-">binary</a>
+<ul class="nav">
+<li><a href="#sec-">find binary location</a></li>
+</ul>
+</li>
+<li><a href="#sec-">files</a>
+<ul class="nav">
+<li><a href="#sec-">diff</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>

@@ -193,22 +193,66 @@ $(function() {
 <div id="content" class="container">
 <div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">get last directory in path</h2>
+<h2 id="sec-">Paradigms</h2>
 <div class="outline-text-2" id="text-">
-<div class="org-src-container">
+<blockquote>
+<p>
+Typical paradigm-level code categories include procedural, object-oriented (OO/classes), and functional (FP):<br >
+</p>
 
-<pre class="src src-sh"><span style="font-weight: bold; font-style: italic;">PTHVAR</span>=<span style="font-style: italic;">"/path/to/folder"</span>
-<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>=$( basename $<span style="font-weight: bold; font-style: italic;">PTHVAR</span>)
+<ul class="org-ul">
+<li>Procedural style organizes code in a top-down, linear progression through a pre-determined set of operations, usually collected together in related units called procedures.<br >
+</li>
 
-<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>
-</pre>
+<li>OO style organizes code by collecting logic and data together into units called classes.<br >
+</li>
+
+<li>FP style organizes code into functions (pure computations as opposed to procedures), and the adaptations of those functions as values.<br >
+</li>
+</ul>
+</blockquote>
+
+<p>
+from You Don't Know JS Yet (book series) - 2nd Edition, Kyle Simpson, <a href="https://github.com/getify/You-Dont-Know-JS">github.com</a>.<br >
+</p>
 </div>
+</div>
+
+
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">Backward and forwards compatibility</h2>
+<div class="outline-text-2" id="text-">
+<p>
+Backwards compatibility<br >
+</p>
+<blockquote>
+<p>
+Code written for older versions of the language still work in new versions of the language.<br >
+</p>
+</blockquote>
+<p>
+Example: <a href="js.html">JS</a><br >
+</p>
+
+<p>
+Forwards compatibility<br >
+</p>
+<blockquote>
+<p>
+Code written for new versions of the language are compatible with old versions of the language (e.g. by skipping unrecognized functions).<br >
+</p>
+</blockquote>
+<p>
+Example: <a href="html.html">HTML</a>, <a href="css.html">CSS</a><br >
+</p>
 </div>
 </div>
 </div><div class="col-md-3"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">get last directory in path</a></li>
+<li><a href="#sec-">Paradigms</a></li>
+<li><a href="#sec-">Backward and forwards compatibility</a></li>
 </ul>
 </div>
 </nav>

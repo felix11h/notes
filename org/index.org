@@ -3,10 +3,7 @@
 
 * sort
 
-#+BEGIN_SRC 
-diff -qr dir1/ dir2/
-git diff --no-index dir1/ dir2/
-#+END_SRC
+DDos protection by cloudflare
 
 Docker stop and remove
 #+BEGIN_SRC 
@@ -42,17 +39,64 @@ as seen for example on [[https://www.rockpapershotgun.com/2019/06/14/cyberpunk-2
 
 for unicode characters [[https://graphemica.com/search?q=file][graphemica.com]]
 
+
+[[https://github.com/ElliotPenson/org]],
+[[http://jgkamat.gitlab.io/blog/website1.html]]
+
+still think about bookstack
+still think about https://www.getoutline.com/
+
+
+resources: [[https://www.reddit.com/r/emacs/comments/5mff61/anyone_got_any_good_advanced_orgmode_resources/][r/emacs]]
+
+
+
+[[https://www.reddit.com/r/devops/comments/8mhju4/best_online_source_to_learn_devops_tools/][r/devops]]
+https://roadmap.sh/guides/what-is-internet
+
+https://sp18.datastructur.es/, [[https://www.reddit.com/r/learnprogramming/comments/8mdlb9/what_online_courses_are_100_entirely_worth_it/][reddit.com]]
+
+[[https://www.reddit.com/r/linuxadmin/comments/65vb8s/advice_if_you_are_wanting_to_go_into_devops/][r/linuxadmin]]
+
+
+from [[file:dev/nb.org][nb.org]]
+
+service mesh [[https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/][buoyant.io]]
+
+
+: docker compile -v 
+should be in quotation marks "" (see PUGpresent)
+
+
+DNS can be simple load balancer (round robin)
+
+Why I pick Heroku over AWS Lambda. But not always. [[https://blog.checklyhq.com/why-i-pick-heroku-over-aws-lambda-but-not-always/][blog.checklyhq.com]]
+
+course [[https://cloudacademy.com/learning-paths/building-and-deploying-a-cloud-native-application-796/][cloudacademy.com]]
+
+
+* learn
+checksum, sha512, SMTP, FTP, SSH, HTTP, /dev/null
+virtual console vs. terminal, CDN
+
 * dev
 
 [[file:dev/git.org][git]], [[file:dev/GitHub.org][GitHub]]
 
+* ops
+
+
 * languages
 
-[[file:lang/bash.org][bash]], 
+[[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/python.org][python]], [[file:lang/js.org][js]], [[file:lang/html.org][html]], [[file:lang/css.org][css]]
 
 * opt
 
-[[file:opt/emacs.org][emacs]],
+[[file:opt/linux.org][linux]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]]
+
+* data science
+
+[[file:data/visualization.org][visualization]],
 
 
 * test

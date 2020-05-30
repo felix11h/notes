@@ -188,27 +188,144 @@ $(function() {
     $('.bs-docs-sidebar').affix();
 });
 </script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  displayAlign: "center",
+  displayIndent: "2em",
+  messageStyle: "none",
+  "HTML-CSS": {
+    scale: 100,
+    styles: {
+      ".MathJax_Display": {
+        "font-size": "100%"
+      }
+    }
+  },
+  "SVG": {
+    scale: 100,
+    styles: {
+      ".MathJax_SVG_Display": {
+        "font-size": "100%",
+        "margin-left": "-2.281em"
+      }
+    }
+  }
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
 </head>
 <body>
 <div id="content" class="container">
 <div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">get last directory in path</h2>
+<h2 id="sec-">commands</h2>
 <div class="outline-text-2" id="text-">
-<div class="org-src-container">
-
-<pre class="src src-sh"><span style="font-weight: bold; font-style: italic;">PTHVAR</span>=<span style="font-style: italic;">"/path/to/folder"</span>
-<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>=$( basename $<span style="font-weight: bold; font-style: italic;">PTHVAR</span>)
-
-<span style="font-weight: bold;">echo</span> $<span style="font-weight: bold; font-style: italic;">LSTFLDR</span>
+</div><div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">Change user and email of commit</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+git
 </pre>
+</div>
+</div>
+
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">log of subdirectory</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+git log -- path/to/subdir
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">ignore file mode (chmod) changes</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+git config core.fileMode false
+
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">merge git repository as subdirectory</h3>
+<div class="outline-text-3" id="text-">
+<p>
+As described in <a href="http://stackoverflow.com/a/21495718/692634">Stack Overflow Answer</a>:<br >
+</p>
+
+<p>
+merge project projA into projB:<br >
+</p>
+
+<p>
+~/projB<br >
+</p>
+
+<p>
+~/path/to/projA<br >
+</p>
+
+<ol class="org-ol">
+<li>create clone of projA<br >
+</li>
+</ol>
+
+<p>
+procedure rewrites history of projA!<br >
+</p>
+
+<ol class="org-ol">
+<li>in ~/path/to/projA_clone<br >
+</li>
+</ol>
+
+<hr >
+<p>
+PREFIX=subdir/path/in/projB  #adjust this<br >
+</p>
+
+<p>
+git filter-branch &#x2013;index-filter '<br >
+    git ls-files -s |<br >
+    sed "s,\t,&amp;'"$PREFIX"'/," |<br >
+    GIT_INDEX_FILE=$GIT_INDEX_FILE.new git update-index &#x2013;index-info &amp;&amp;<br >
+    mv $GIT_INDEX_FILE.new $GIT_INDEX_FILE<br >
+' HEAD<br >
+</p>
+<hr >
+
+<p>
+where PREFIX is adjusted to relative path within ~/projB.<br >
+</p>
+
+<ol class="org-ol">
+<li>Then in ~/projB, simply:<br >
+</li>
+</ol>
+
+<p>
+git pull path/to/A<br >
+</p>
 </div>
 </div>
 </div>
 </div><div class="col-md-3"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">get last directory in path</a></li>
+<li><a href="#sec-">commands</a>
+<ul class="nav">
+<li><a href="#sec-">Change user and email of commit</a></li>
+<li><a href="#sec-">log of subdirectory</a></li>
+<li><a href="#sec-">ignore file mode (chmod) changes</a></li>
+<li><a href="#sec-">merge git repository as subdirectory</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
