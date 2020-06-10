@@ -1,11 +1,10 @@
 
-* commands
+* general
 
 ** Change user and email of commit
 #+BEGIN_SRC 
 git
 #+END_SRC
-
 
 ** log of subdirectory
 : git log -- path/to/subdir
@@ -14,23 +13,23 @@ git
 : git config core.fileMode false
 
 
+* merge
+
+
 ** merge git repository as subdirectory
 
-As described in [[http://stackoverflow.com/a/21495718/692634][Stack Overflow Answer]]:
+As described on [[http://stackoverflow.com/a/21495718/692634][stackoverflow.com]], to merge project ~projA~ into ~projB~:
 
-merge project projA into projB:
+: ~/projB
+: ~/path/to/projA
 
-~/projB
+1) create clone of projA (note: procedure rewrites history of ~projA~)
 
-~/path/to/projA
+: git clone ~/path/to/projA ~/new/path/to/projA_clone
 
-1. create clone of projA
+2) in ~~/new/path/to/projA_clone~
 
-procedure rewrites history of projA!
-
-2. in ~/path/to/projA_clone
-
---------------------------------------------------
+#+BEGIN_SRC sh
 PREFIX=subdir/path/in/projB  #adjust this
 
 git filter-branch --index-filter '
@@ -39,10 +38,11 @@ git filter-branch --index-filter '
     GIT_INDEX_FILE=$GIT_INDEX_FILE.new git update-index --index-info &&
     mv $GIT_INDEX_FILE.new $GIT_INDEX_FILE
 ' HEAD
---------------------------------------------------
+#+END_SRC
 
-where PREFIX is adjusted to relative path within ~/projB.
+where ~PREFIX~ is adjusted to relative path within ~~/projB~.
 
-3. Then in ~/projB, simply: 
+3) In ~/projB, simply: 
 
-git pull path/to/A
+: git pull path/to/A
+
