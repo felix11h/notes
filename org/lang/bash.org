@@ -8,3 +8,43 @@ LSTFLDR=$( basename $PTHVAR)
 
 echo $LSTFLDR
 #+END_SRC
+
+
+* cp path/filenames 
+
+#!/bin/sh
+
+
+# ---------- ./src ./tar/ -----------
+
+mkdir -p output-dir
+rm -rf output-dir/*
+
+# expectation
+#  output-dir/
+#  |
+#  |--test-dir-01/
+#     |
+#     |--example-file-01
+cp -r ./test-dir-01 output-dir/ 
+
+
+
+# --------- ../src ../tar/ ----------
+
+mkdir -p output-dir
+rm -rf output-dir/*
+
+mkdir tmp_dest-dir
+cd tmp_dest-dir
+
+# expectation
+#  output-dir/
+#  |
+#  |--test-dir-01/
+#     |
+#     |--example-file-01
+cp -r ../test-dir-01 ../output-dir/ 
+
+cd ../
+rm -rf tmp_dest-dir

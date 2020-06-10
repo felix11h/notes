@@ -15,3 +15,22 @@ which okular
 diff -qr dir1/ dir2/
 git diff --no-index dir1/ dir2/
 #+END_SRC
+
+
+* devices
+
+** safe remove drives
+#+BEGIN_SRC 
+udisksctl unmount -b /dev/sdd2
+udisksctl power-off -b /dev/sdd
+#+END_SRC
+
+#+BEGIN_SRC 
+udisksctl unmount -b /dev/sdc2
+udisksctl power-off -b /dev/sdc
+#+END_SRC
+
+
+
+* suspend on timer
+: sleep 20m  && systemctl suspend -i

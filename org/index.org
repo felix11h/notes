@@ -21,18 +21,13 @@ find . -type d -name builds -exec rm -rf {} +
 #+END_SRC
 
 
-rsync
-#+BEGIN_SRC 
-rsync -av --delete --no-p --no-g --chmod=ugo=rwX --exclude=*~ n--exclude=\.\#* --exclude=\.git* /media/fh/44C07FAA1757A143/D/audio/ /media/fh/3463-6330/audio/
-#+END_SRC
-
 code drip 
  -- levels.fyi
  -- indiehackers.com
  -- levels.io
  -- toptal.com
 
-: sleep 20m  && systemctl suspend -i
+
 
 Font: Google Rubik [[https://fonts.google.com/specimen/Rubik][fonts.google.com]]
 as seen for example on [[https://www.rockpapershotgun.com/2019/06/14/cyberpunk-2077s-in-game-context-doesnt-matter-if-its-marketing-contributes-to-transphobia-right-now/][rockpapershotgun.com]]
@@ -74,10 +69,17 @@ Why I pick Heroku over AWS Lambda. But not always. [[https://blog.checklyhq.com/
 
 course [[https://cloudacademy.com/learning-paths/building-and-deploying-a-cloud-native-application-796/][cloudacademy.com]]
 
+https://medium.com/@giltayar/testing-your-frontend-code-part-i-introduction-7e307eac4446
+
+
+https://martinfowler.com/agile.html
+
+
+
 
 * learn
 checksum, sha512, SMTP, FTP, SSH, HTTP, /dev/null
-virtual console vs. terminal, CDN
+virtual console vs. terminal, CDN, POSIX
 
 * dev
 

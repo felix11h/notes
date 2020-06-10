@@ -39,6 +39,62 @@ Popular choice for JS transpiler: [[https://babeljs.io/][babeljs.io]].
 ** Polyfill ("shim")
 
 
+
+* Pitfalls
+
+** negative indexing
+Doesn't exist! To properly index the last element
+#+BEGIN_SRC js
+var arr = [1,2,3];
+arr[arr.length - 1] = 5;
+#+END_SRC
+
+** comparison
+#+BEGIN_SRC js
+NaN === NaN;            // false
+0 === -0;               // true
+#+END_SRC
+
+#+BEGIN_SRC js
+[ 1, 2, 3 ] === [ 1, 2, 3 ];    // false
+{ a: 42 } === { a: 42 }         // false
+(x => x * 2) === (x => x * 2)   // false
+#+END_SRC
+
+#+BEGIN_SRC js
+var x = [ 1, 2, 3 ];
+
+// assignment is by reference-copy, so
+// y references the *same* array as x,
+// not another copy of it.
+var y = x;
+
+y === x;              // true
+y === [ 1, 2, 3 ];    // false
+x === [ 1, 2, 3 ];    // false
+#+END_SRC
+
+
+I
+
+*** ~<~ and ~>~ perform coercion
+
+#+BEGIN_SRC js
+var x = "10";
+var y = 9;
+
+x < y;      // false
+#+END_SRC
+
+but when they are of the same type, they use alphabetic
+
+#+BEGIN_SRC js
+var x = "10";
+var y = "9";
+
+x < y;      // true, watch out!
+#+END_SRC
+
 * Test
 
 (test)
