@@ -19,17 +19,11 @@ git diff --no-index dir1/ dir2/
 
 * devices
 
-** safe remove drives
+** safely remove drives
 #+BEGIN_SRC 
 udisksctl unmount -b /dev/sdd2
 udisksctl power-off -b /dev/sdd
 #+END_SRC
-
-#+BEGIN_SRC 
-udisksctl unmount -b /dev/sdc2
-udisksctl power-off -b /dev/sdc
-#+END_SRC
-
 
 
 * suspend on timer

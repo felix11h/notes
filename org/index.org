@@ -5,13 +5,6 @@
 
 DDos protection by cloudflare
 
-Docker stop and remove
-#+BEGIN_SRC 
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-#+END_SRC
-
-
 #+BEGIN_SRC 
 du -h -d1 . | grep '[0-9\,]\+G'
 ls -l --block-size=M
@@ -72,8 +65,8 @@ course [[https://cloudacademy.com/learning-paths/building-and-deploying-a-cloud-
 https://medium.com/@giltayar/testing-your-frontend-code-part-i-introduction-7e307eac4446
 
 
-https://martinfowler.com/agile.html
 
+https://martinfowler.com/agile.html
 
 
 
@@ -82,27 +75,24 @@ checksum, sha512, SMTP, FTP, SSH, HTTP, /dev/null
 virtual console vs. terminal, CDN, POSIX
 
 * dev
-
 [[file:dev/git.org][git]], [[file:dev/GitHub.org][GitHub]]
 
 * ops
+[[file:ops/docker.org][docker]] 
 
-
-* languages
-
+* lang
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/python.org][python]], [[file:lang/js.org][js]], [[file:lang/html.org][html]], [[file:lang/css.org][css]]
 
 * opt
-
 [[file:opt/linux.org][linux]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]]
 
-* data science
+* org
+[[file:org/agile.org][agile]]
 
+* data science
 [[file:data/visualization.org][visualization]],
 
-
 * test
-
 [[file:test/test_article.org][test article]]
 
 
