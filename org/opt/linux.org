@@ -17,6 +17,27 @@ git diff --no-index dir1/ dir2/
 #+END_SRC
 
 
+** find large folders
+#+BEGIN_SRC 
+du -h -d1 . | grep '[0-9\,]\+G'
+#+END_SRC
+#+BEGIN_SRC 
+ls -l --block-size=M
+#+END_SRC
+
+** find a remove
+#+BEGIN_SRC 
+find ./*/builds/*/results -type f -name '*' -exec rm {} +
+#+END_SRC
+#+BEGIN_SRC 
+find ./*/builds -type d -name '*' -exec rm -rf {} +
+#+END_SRC
+#+BEGIN_SRC 
+find . -type d -name builds -exec rm -rf {} +
+#+END_SRC
+
+
+
 * devices
 
 ** safely remove drives

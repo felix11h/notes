@@ -3,16 +3,6 @@
 
 * sort
 
-DDos protection by cloudflare
-
-#+BEGIN_SRC 
-du -h -d1 . | grep '[0-9\,]\+G'
-ls -l --block-size=M
-find ./*/builds/*/results -type f -name '*' -exec rm {} +
-find ./*/builds -type d -name '*' -exec rm -rf {} +
-find . -type d -name builds -exec rm -rf {} +
-#+END_SRC
-
 code drip 
  -- levels.fyi
  -- indiehackers.com

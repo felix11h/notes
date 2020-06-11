@@ -23,7 +23,7 @@ As described on [[http://stackoverflow.com/a/21495718/692634][stackoverflow.com]
 : ~/projB
 : ~/path/to/projA
 
-1) create clone of projA (note: procedure rewrites history of ~projA~)
+1) create clone of ~projA~ (note: procedure rewrites history of ~projA~)
 
 : git clone ~/path/to/projA ~/new/path/to/projA_clone
 
@@ -42,7 +42,8 @@ git filter-branch --index-filter '
 
 where ~PREFIX~ is adjusted to relative path within ~~/projB~.
 
-3) In ~/projB, simply: 
+3) In ~~/projB~, simply: 
 
 : git pull path/to/A
+
 
