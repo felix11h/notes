@@ -45,5 +45,3 @@ where ~PREFIX~ is adjusted to relative path within ~~/projB~.
 3) In ~~/projB~, simply: 
 
 : git pull path/to/A
-
-
