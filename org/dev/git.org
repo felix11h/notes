@@ -2,9 +2,7 @@
 * general
 
 ** Change user and email of commit
-#+BEGIN_SRC 
-git
-#+END_SRC
+: git
 
 ** log of subdirectory
 : git log -- path/to/subdir
@@ -13,6 +11,15 @@ git
 : git config core.fileMode false
 
 
+* modifying history
+
+** undo commit
+keeping file changes
+: git reset --soft HEAD~1
+
+discard file changes
+: git reset --hard HEAD~1
+
 * merge
 
 
@@ -20,12 +27,17 @@ git
 
 As described on [[http://stackoverflow.com/a/21495718/692634][stackoverflow.com]], to merge project ~projA~ into ~projB~:
 
-: ~/projB
-: ~/path/to/projA
+#+BEGIN_SRC sh
+ ~/projB
+ ~/path/to/projA
+#+END_SRC
 
 1) create clone of ~projA~ (note: procedure rewrites history of ~projA~)
 
-: git clone ~/path/to/projA ~/new/path/to/projA_clone
+#+BEGIN_SRC 
+git clone ~/path/to/projA ~/new/path/to/projA_clone
+#+END_SRC 
+
 
 2) in ~~/new/path/to/projA_clone~
 
@@ -45,3 +57,14 @@ where ~PREFIX~ is adjusted to relative path within ~~/projB~.
 3) In ~~/projB~, simply: 
 
 : git pull path/to/A
+
+** merge git repository as subdirectory
+(perserves history) [[https://stackoverflow.com/a/43345686/692634][stackoverflow.com]]
+
+
+
+
+
+* global repository modifications
+
+** "push down" repository contents into a subfolder

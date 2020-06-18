@@ -6,10 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
 <meta name="author" content="fh">
-
-<link  href="../assets/bootstrap.min.css" rel="stylesheet">
-<script src="../assets/jquery.min.js"></script>
-<script src="../assets/bootstrap.min.js"></script>
+<link  href="./assets/bootstrap.min.css" rel="stylesheet"> <script src="./assets/jquery.min.js"></script> <script src="./assets/bootstrap.min.js"></script>
 <style type="text/css">
 /* org mode styles on top of twbs */
 
@@ -192,171 +189,81 @@ $(function() {
 <body>
 <div id="content" class="container">
 <div class="row"><div class="col-md-9"><h1 class="title"></h1>
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">general</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">Change user and email of commit</h3>
-<div class="outline-text-3" id="text-">
-<pre class="example">
-git
-
-</pre>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">log of subdirectory</h3>
-<div class="outline-text-3" id="text-">
-<pre class="example">
-git log -- path/to/subdir
-
-</pre>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">ignore file mode (chmod) changes</h3>
-<div class="outline-text-3" id="text-">
-<pre class="example">
-git config core.fileMode false
-
-</pre>
-</div>
-</div>
-</div>
-
 
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">modifying history</h2>
+<h2 id="sec-">sort</h2>
 <div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">undo commit</h3>
-<div class="outline-text-3" id="text-">
-<p>
-keeping file changes<br >
-</p>
-<pre class="example">
-git reset --soft HEAD~1
-
-</pre>
-
-<p>
-discard file changes<br >
-</p>
-<pre class="example">
-git reset --hard HEAD~1
-
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">merge</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">merge git repository as subdirectory</h3>
-<div class="outline-text-3" id="text-">
-<p>
-As described on <a href="http://stackoverflow.com/a/21495718/692634">stackoverflow.com</a>, to merge project <code>projA</code> into <code>projB</code>:<br >
-</p>
-
-<div class="org-src-container">
-
-<pre class="src src-sh">~/projB
-~/path/to/projA
-</pre>
-</div>
+<ul class="org-ul">
+<li>levels.fyi<br >
+</li>
+<li>indiehackers.com<br >
+</li>
+<li>levels.io<br >
+</li>
+<li>toptal.com<br >
+</li>
+</ul>
 
 <p>
-1) create clone of <code>projA</code> (note: procedure rewrites history of <code>projA</code>)<br >
-</p>
-
-<pre class="example">
-git clone ~/path/to/projA ~/new/path/to/projA_clone
-</pre>
-
-
-<p>
-2) in <code>~/new/path/to/projA_clone</code><br >
-</p>
-
-<div class="org-src-container">
-
-<pre class="src src-sh"><span style="color: #b58900;">PREFIX</span>=subdir/path/in/projB  <span style="color: #586e75; font-style: italic;">#</span><span style="color: #657b83; font-style: italic;">adjust this</span>
-
-git filter-branch --index-filter <span style="color: #2aa198;">'</span>
-<span style="color: #2aa198;">    git ls-files -s |</span>
-<span style="color: #2aa198;">    sed "s,\t,&amp;'"$PREFIX"'/," |</span>
-<span style="color: #2aa198;">    GIT_INDEX_FILE=$GIT_INDEX_FILE.new git update-index --index-info &amp;&amp;</span>
-<span style="color: #2aa198;">    mv $GIT_INDEX_FILE.new $GIT_INDEX_FILE</span>
-<span style="color: #2aa198;">'</span> HEAD
-</pre>
-</div>
-
-<p>
-where <code>PREFIX</code> is adjusted to relative path within <code>~/projB</code>.<br >
+<a href="https://github.com/ElliotPenson/org">https://github.com/ElliotPenson/org</a>,<br >
+<a href="http://jgkamat.gitlab.io/blog/website1.html">http://jgkamat.gitlab.io/blog/website1.html</a><br >
 </p>
 
 <p>
-3) In <code>~/projB</code>, simply:<br >
+still think about bookstack<br >
+still think about <a href="https://www.getoutline.com/">https://www.getoutline.com/</a><br >
 </p>
+
+<p>
+resources: <a href="https://www.reddit.com/r/emacs/comments/5mff61/anyone_got_any_good_advanced_orgmode_resources/">r/emacs</a><br >
+</p>
+
+<p>
+<a href="https://www.reddit.com/r/devops/comments/8mhju4/best_online_source_to_learn_devops_tools/">r/devops</a><br >
+<a href="https://roadmap.sh/guides/what-is-internet">https://roadmap.sh/guides/what-is-internet</a><br >
+</p>
+
+<p>
+<a href="https://sp18.datastructur.es/">https://sp18.datastructur.es/</a>, <a href="https://www.reddit.com/r/learnprogramming/comments/8mdlb9/what_online_courses_are_100_entirely_worth_it/">reddit.com</a><br >
+</p>
+
+<p>
+<a href="https://www.reddit.com/r/linuxadmin/comments/65vb8s/advice_if_you_are_wanting_to_go_into_devops/">r/linuxadmin</a><br >
+</p>
+
+<p>
+service mesh <a href="https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/">buoyant.io</a><br >
+</p>
+
 
 <pre class="example">
-git pull path/to/A
+docker compile -v 
 
 </pre>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">merge git repository as subdirectory</h3>
-<div class="outline-text-3" id="text-">
 <p>
-(perserves history) <a href="https://stackoverflow.com/a/43345686/692634">stackoverflow.com</a><br >
+should be in quotation marks "" (see PUGpresent)<br >
 </p>
-</div>
-</div>
-</div>
+
+
+<p>
+DNS can be simple load balancer (round robin)<br >
+</p>
 
 
 
+<p>
+course <a href="https://cloudacademy.com/learning-paths/building-and-deploying-a-cloud-native-application-796/">cloudacademy.com</a><br >
+</p>
 
-
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">global repository modifications</h2>
-<div class="outline-text-2" id="text-">
-</div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">"push down" repository contents into a subfolder</h3>
+<p>
+<a href="https://medium.com/@giltayar/testing-your-frontend-code-part-i-introduction-7e307eac4446">https://medium.com/@giltayar/testing-your-frontend-code-part-i-introduction-7e307eac4446</a><br >
+</p>
 </div>
 </div>
 </div><div class="col-md-3"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">general</a>
-<ul class="nav">
-<li><a href="#sec-">Change user and email of commit</a></li>
-<li><a href="#sec-">log of subdirectory</a></li>
-<li><a href="#sec-">ignore file mode (chmod) changes</a></li>
-</ul>
-</li>
-<li><a href="#sec-">modifying history</a>
-<ul class="nav">
-<li><a href="#sec-">undo commit</a></li>
-</ul>
-</li>
-<li><a href="#sec-">merge</a>
-<ul class="nav">
-<li><a href="#sec-">merge git repository as subdirectory</a></li>
-<li><a href="#sec-">merge git repository as subdirectory</a></li>
-</ul>
-</li>
-<li><a href="#sec-">global repository modifications</a>
-<ul class="nav">
-<li><a href="#sec-">"push down" repository contents into a subfolder</a></li>
-</ul>
-</li>
+<li><a href="#sec-">sort</a></li>
 </ul>
 </div>
 </nav>

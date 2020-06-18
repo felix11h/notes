@@ -1,0 +1,11 @@
+
+* system setup
+ 
+** remap caps lock
+[[https://coderwall.com/p/cq_lkg/remapping-caps-lock-key-to-something-more-natural-on-mac-os-x][coderwall.com]]
+
+** install zsh 
+also see [[https://sourabhbajaj.com/mac-setup/][sourabhbajaj.com/mac-setup]]
+: brew install zsh
+
+

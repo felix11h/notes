@@ -1,68 +1,23 @@
 #+SETUPFILE: ../templates/index_config.org
 
 
-* sort
-
-code drip 
- -- levels.fyi
- -- indiehackers.com
- -- levels.io
- -- toptal.com
-
-Font: Google Rubik [[https://fonts.google.com/specimen/Rubik][fonts.google.com]]
-as seen for example on [[https://www.rockpapershotgun.com/2019/06/14/cyberpunk-2077s-in-game-context-doesnt-matter-if-its-marketing-contributes-to-transphobia-right-now/][rockpapershotgun.com]]
-
-for unicode characters [[https://graphemica.com/search?q=file][graphemica.com]]
-
-
-[[https://github.com/ElliotPenson/org]],
-[[http://jgkamat.gitlab.io/blog/website1.html]]
-
-still think about bookstack
-still think about https://www.getoutline.com/
-
-resources: [[https://www.reddit.com/r/emacs/comments/5mff61/anyone_got_any_good_advanced_orgmode_resources/][r/emacs]]
-
-[[https://www.reddit.com/r/devops/comments/8mhju4/best_online_source_to_learn_devops_tools/][r/devops]]
-https://roadmap.sh/guides/what-is-internet
-
-https://sp18.datastructur.es/, [[https://www.reddit.com/r/learnprogramming/comments/8mdlb9/what_online_courses_are_100_entirely_worth_it/][reddit.com]]
-
-[[https://www.reddit.com/r/linuxadmin/comments/65vb8s/advice_if_you_are_wanting_to_go_into_devops/][r/linuxadmin]]
-
-service mesh [[https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/][buoyant.io]]
-
-
-: docker compile -v 
-should be in quotation marks "" (see PUGpresent)
-
-
-DNS can be simple load balancer (round robin)
-
-Why I pick Heroku over AWS Lambda. But not always. [[https://blog.checklyhq.com/why-i-pick-heroku-over-aws-lambda-but-not-always/][blog.checklyhq.com]]
-
-course [[https://cloudacademy.com/learning-paths/building-and-deploying-a-cloud-native-application-796/][cloudacademy.com]]
-
-https://medium.com/@giltayar/testing-your-frontend-code-part-i-introduction-7e307eac4446
-
-
-
+unsorted things: [[file:top.org][top]]
 
 * learn
 checksum, sha512, SMTP, FTP, SSH, HTTP, /dev/null
 virtual console vs. terminal, CDN, POSIX
 
 * dev
-[[file:dev/git.org][git]], [[file:dev/GitHub.org][GitHub]]
+[[file:dev/git.org][git]], [[file:dev/GitHub.org][GitHub]], [[file:dev/fonts.org][fonts]]
 
 * ops
-[[file:ops/docker.org][docker]] 
+[[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], 
 
 * lang
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/python.org][python]], [[file:lang/js.org][js]], [[file:lang/html.org][html]], [[file:lang/css.org][css]]
 
 * opt
-[[file:opt/linux.org][linux]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]]
+[[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]]
 
 * org
 [[file:org/agile.org][agile]]
