@@ -1,5 +1,9 @@
 
-* center an image in a README.org on GitHub
+* README.org
+
+** images (centered)
 #+BEGIN_SRC org-mode
 #+html: <p align="center"><img src="images/wim-128.png" /></p>
 #+END_SRC
+
+

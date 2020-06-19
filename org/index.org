@@ -8,7 +8,7 @@ checksum, sha512, SMTP, FTP, SSH, HTTP, /dev/null
 virtual console vs. terminal, CDN, POSIX
 
 * dev
-[[file:dev/git.org][git]], [[file:dev/GitHub.org][GitHub]], [[file:dev/fonts.org][fonts]]
+[[file:dev/git.org][git]], [[file:dev/github.org][GitHub]], [[file:dev/fonts.org][fonts]]
 
 * ops
 [[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], 

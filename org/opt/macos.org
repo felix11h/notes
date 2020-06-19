@@ -8,4 +8,6 @@
 also see [[https://sourabhbajaj.com/mac-setup/][sourabhbajaj.com/mac-setup]]
 : brew install zsh
 
+** activate (focus) on specific applications
+[[https://stackoverflow.com/questions/4788565/keyboard-shortcut-to-focus-on-an-app-in-mac-os][stackoverflow.com]]
 
