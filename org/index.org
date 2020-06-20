@@ -1,11 +1,7 @@
 #+SETUPFILE: ../templates/index_config.org
 
 
-unsorted things: [[file:top.org][top]]
-
-* learn
-checksum, sha512, SMTP, FTP, SSH, HTTP, /dev/null
-virtual console vs. terminal, CDN, POSIX
+[[file:notepad.org][notepad]], [[file:sort.org][sort]]
 
 * dev
 [[file:dev/git.org][git]], [[file:dev/github.org][GitHub]], [[file:dev/fonts.org][fonts]]
