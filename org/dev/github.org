@@ -7,3 +7,8 @@
 #+END_SRC
 
 
+** two images side-by-side
+#+BEGIN_SRC org-mode 
+#+html: <div><p align="center"><img src="img/rate_map.png" width="50%"/><img src="img/path_map.png" width="50%"/></p></div>
+#+END_SRC
+
