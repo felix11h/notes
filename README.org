@@ -1,0 +1,10 @@
+Personal knowledge base written in Emacs Org-Mode and published on GitHub pages. 
+
+** Read
+
+On GitHub [[https://github.com/felix11h/notes/blob/master/org/index.org][org/index.org]].
+
+Online at [[https://felix11h.github.io/notes/][felix11h.github.io/notes]]. 
+
+
+
