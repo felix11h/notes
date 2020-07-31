@@ -1,0 +1,6 @@
+
+* git branch autocompletion
+adding this to your ~.zshrc~ should be enough
+: autoload -Uz compinit && compinit
+
+from [[https://stackoverflow.com/a/58517668][stackoverflow.com]]
