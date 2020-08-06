@@ -11,7 +11,7 @@
 [[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], 
 
 * lang
-[[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/python.org][python]], [[file:lang/js.org][js]], [[file:lang/html.org][html]], [[file:lang/css.org][css]]
+[[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/zsh.org][zsh]], [[file:lang/oh-my-zsh.org][oh-my-zsh]], [[file:lang/python.org][python]], [[file:lang/js.org][js]], [[file:lang/html.org][html]], [[file:lang/css.org][css]]
 
 * opt
 [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]]

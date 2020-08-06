@@ -1,0 +1,5 @@
+
+* git branch autocompletion
+edit your ~.zshrc~ and add 
+: plugins=(git gitfast)
+[[https://unix.stackexchange.com/a/204308][unix.stackexchange.com]]
