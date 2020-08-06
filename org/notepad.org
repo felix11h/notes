@@ -2,6 +2,8 @@
 
 * notepad
 
+ - database, junction table [[https://stackoverflow.com/questions/444251/how-to-store-a-list-in-a-db-column][stackoverflow.com]]
+ - Twitter: [[https://lanre.wtf/blog/2019/01/02/database-migration-golang/][lane.wtf]]
  - learn JavaScript (basis for electron, Angular, React). [[https://javascript.info/][javascript.info/]], You Don't Know JavaScript [[https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/ch1.md][github.com]], [[https://watchandcode.com/][watchandcode.com]], [[https://www.freecodecamp.org/][freecodecamp.org]]
  - learn advanced git [[https://learngitbranching.js.org/][learngitbranching.js.org]], [[https://www.atlassian.com/git/tutorials/advanced-overview][atlassian.com/git/tutorials]], [[https://rachelcarmena.github.io/2018/12/12/how-to-teach-git.html][rachelcarmena.github.io]], [[https://news.ycombinator.com/item?id=21189256][news.ycombinator.com]], 
  - learn advanced bash ~xargs~
