@@ -1,0 +1,12 @@
+
+* set ~None~ values with ~null~
+#+BEGIN_SRC python
+>>> import yaml
+>>> yaml.safe_load("name: null")
+
+{'name': None}
+#+END_SRC
+
+
+* load into dataclasses
+
