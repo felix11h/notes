@@ -1,0 +1,11 @@
+
+* ~ignoreChanges~
+This option specifies a list of properties which will be ignored when updating existing resources. Any properties specified in this list, that are also specified in the resource’s arguments, will only be used when creating the resource—and ignored entirely while updating it.
+
+For instance, in this example, the resource’s prop property will have its value of "new-value" set when initially creating resource, but from then on, any and all changes will be ignored: (from [[https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges][pulumi.com/docs]])
+
+#+BEGIN_SRC python
+res = MyResource("res",
+    prop="new-value",
+    opts=ResourceOptions(ignore_changes=["prop"]))
+#+END_SRC
