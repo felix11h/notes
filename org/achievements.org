@@ -1,0 +1,11 @@
+
+* AWS Identity and Management (IAM) configuration in Pulumi (Python)
+# July 2020; tags: pulumi, devops, aws
+
+
+* GitHub Organization configuration in Pulumi (Python)
+# August 2020; tags: pulumi, devops, github
+
+
+* AWS S3 configuration in Pulumi (Python)
+# August 2020; tags: pulumi, devops, aws
