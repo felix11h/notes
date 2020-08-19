@@ -1,5 +1,6 @@
 
 * ~ignoreChanges~
+
 This option specifies a list of properties which will be ignored when updating existing resources. Any properties specified in this list, that are also specified in the resource’s arguments, will only be used when creating the resource—and ignored entirely while updating it.
 
 For instance, in this example, the resource’s prop property will have its value of "new-value" set when initially creating resource, but from then on, any and all changes will be ignored: (from [[https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges][pulumi.com/docs]])
@@ -9,3 +10,56 @@ res = MyResource("res",
     prop="new-value",
     opts=ResourceOptions(ignore_changes=["prop"]))
 #+END_SRC
+
+
+
+* OnCreateResource hooks
+
+There is no straightforward way to do this, but two options exist ([[https://pulumi-community.slack.com/archives/CDE799L1M/p1597668356273400][pulumi-community.slack.com]]).
+
+** 1. Use dynamic providers/resources            
+This approach creates a new dynamic resources that depends on the resource that was created. It has its own ~create()~ implementation that
+serves as the hook.
+
+See [[https://www.pulumi.com/docs/intro/concepts/programming-model/#dynamicproviders][pulumi.com/docs]] and an example implementation for AWS EC2 provisioners, [[https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/__main__.py][__main__.py]] and [[https://github.com/pulumi/examples/blob/master/aws-py-ec2-provisioners/provisioners.py][provisioners.py]] on GitHub.
+
+Example:
+
+#+BEGIN_SRC python
+from typing import Optional, Any
+from uuid import uuid4
+import pulumi
+from pulumi import dynamic
+class OnCreateWarningProvider(dynamic.ResourceProvider):
+    warning_printed = False
+    def print_warning(self, message):
+        if not self.warning_printed:
+            pulumi.warn(message)
+            OnCreateWarningProvider.warning_printed = True
+    def create(self, inputs: Any):
+        self.print_warning(inputs['message'])
+        return dynamic.CreateResult(id_=uuid4().hex, outs={})
+class OnCreateWarning(dynamic.Resource):
+    def __init__(self, name: str, message: str, opts: Optional[pulumi.ResourceOptions] = None):
+        super().__init__(
+            OnCreateWarningProvider(),
+            name,
+            {'message': message},
+            opts=opts
+        )
+#+END_SRC
+
+which gets called by
+
+#+BEGIN_SRC python
+messaging.OnCreateWarning(
+    name=f"on-create-warning-{resource_name}",
+    message="Resource was created!",
+    opts=pulumi.ResourceOptions(depends_on=[resource]),
+)
+#+END_SRC
+
+
+** 2. Using CrossGuard
+With a CrossGuard ~ResourceValidationPolicy~, see for example  [[https://github.com/pulumi/templates-policy/blob/master/aws-python/__main__.py#L10-L15][github.com/pulumi]]. Run Pulumi with
+: pulumi up --policy-pack path-to-policy-code/
