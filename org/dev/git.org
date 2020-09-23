@@ -10,6 +10,11 @@
 ** ignore file mode (chmod) changes
 : git config core.fileMode false
 
+* files
+
+** revert single file
+: git checkout HEAD -- my-file.txt
+/Note: ~--~ basically means treat every argument after this point as a file name./
 
 * modifying history
 
@@ -19,6 +24,10 @@ keeping file changes
 
 discard file changes
 : git reset --hard HEAD~1
+
+
+* fixup & autosquash
+
 
 * merge
 
