@@ -1,0 +1,13 @@
+
+* Angular vs React vs Vue
+
+from [[https://www.reddit.com/r/node/comments/ikew02/angular_vs_react_vs_vue_which_front_end_framework/][r/node]]:
+
+#+BEGIN_QUOTE 
+Angular - heavy-handed, but if you don’t need to go too far off the rails it can make a decent SPA
+
+React - more lightweight than Angular, allows for a more simple development process if you wouldn’t benefit from the exact structure of Angular
+
+Vue - the most lightweight, components are even more self-contained than in the other solutions which can be great for reusability
+#+END_QUOTE
+

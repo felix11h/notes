@@ -5,7 +5,7 @@
 
 
 * dev
-[[file:dev/git.org][git]], [[file:dev/github.org][GitHub]], [[file:dev/fonts.org][fonts]]
+[[file:dev/git.org][git]], [[file:dev/github.org][GitHub]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]],
 
 * ops
 [[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], [[file:ops/pulumi.org][pulumi]]
