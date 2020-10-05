@@ -7,10 +7,10 @@
 <meta name="generator" content="Org-mode">
 <meta name="author" content="fh">
 
-<link  href="../assets/bootstrap.min.css" rel="stylesheet">
-<script src="../assets/jquery.min.js"></script>
-<script src="../assets/bootstrap.min.js"></script>
-<style type="text/css">
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
 /* org mode styles on top of twbs */
 
 html {
@@ -177,7 +177,7 @@ figcaption {
     }
 }
 </style>
-<style>body { margin-bottom: 0px; }</style><script type="text/javascript">
+<style>body { margin-bottom: 0px; }</style><script>
 $(function() {
     'use strict';
 
@@ -191,7 +191,39 @@ $(function() {
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-9"><h1 class="title"></h1>
+<div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-">Go</a>
+<ul class="nav">
+<li><a href="#sec-">how to not use for loops</a></li>
+<li><a href="#sec-">how to test when STDIN is involved</a></li>
+<li><a href="#sec-">read multiple integers (without for loop)</a></li>
+<li><a href="#sec-">go strings.NewReader()</a></li>
+</ul>
+</li>
+<li><a href="#sec-">Visual Studio Code setup</a>
+<ul class="nav">
+<li><a href="#sec-">settings sync to synchronize settings between machines</a></li>
+</ul>
+</li>
+<li><a href="#sec-">topics Yury mentioned</a>
+<ul class="nav">
+<li><a href="#sec-">Scrumm / Agile</a></li>
+<li><a href="#sec-">Python</a></li>
+<li><a href="#sec-">Git</a></li>
+</ul>
+</li>
+<li><a href="#sec-">from applications</a>
+<ul class="nav">
+<li><a href="#sec-">REST/RPC APIs?</a></li>
+</ul>
+</li>
+<li><a href="#sec-">from meet-up</a></li>
+</ul>
+</div>
+</nav>
+</div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
 <h2 id="sec-">Go</h2>
 <div class="outline-text-2" id="text-">
@@ -227,7 +259,6 @@ $(function() {
 <div class="outline-text-3" id="text-">
 <pre class="example">
 curl -X POST -d @filename.txt http://example.com/path/to/resource --header "Content-Type:application/json"
-
 </pre>
 
 <p>
@@ -271,7 +302,6 @@ I read the first line using fmt.Fscanln(reader, &amp;singleInt). For the second 
 <pre class="example">
 1. Upload Key : Shift + Alt + U
 2. Download Key : Shift + Alt + D
-
 </pre>
 </div>
 </div>
@@ -333,38 +363,6 @@ rebase, force push, others<br >
 </ul>
 </div>
 </div>
-</div><div class="col-md-3"><nav id="table-of-contents">
-<div id="text-table-of-contents" class="bs-docs-sidebar">
-<ul class="nav">
-<li><a href="#sec-">Go</a>
-<ul class="nav">
-<li><a href="#sec-">how to not use for loops</a></li>
-<li><a href="#sec-">how to test when STDIN is involved</a></li>
-<li><a href="#sec-">read multiple integers (without for loop)</a></li>
-<li><a href="#sec-">go strings.NewReader()</a></li>
-</ul>
-</li>
-<li><a href="#sec-">Visual Studio Code setup</a>
-<ul class="nav">
-<li><a href="#sec-">settings sync to synchronize settings between machines</a></li>
-</ul>
-</li>
-<li><a href="#sec-">topics Yury mentioned</a>
-<ul class="nav">
-<li><a href="#sec-">Scrumm / Agile</a></li>
-<li><a href="#sec-">Python</a></li>
-<li><a href="#sec-">Git</a></li>
-</ul>
-</li>
-<li><a href="#sec-">from applications</a>
-<ul class="nav">
-<li><a href="#sec-">REST/RPC APIs?</a></li>
-</ul>
-</li>
-<li><a href="#sec-">from meet-up</a></li>
-</ul>
-</div>
-</nav>
 </div></div></div>
 </body>
 </html>
