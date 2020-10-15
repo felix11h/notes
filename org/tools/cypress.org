@@ -1,0 +1,4 @@
+
+* logging Chainer objects
+: my_objects.then(myvar => console.log(myvar));
+
