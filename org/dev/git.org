@@ -25,6 +25,35 @@ keeping file changes
 discard file changes
 : git reset --hard HEAD~1
 
+* archive branches
+
+to archive branches, use tags. see also [[https://stackoverflow.com/questions/1307114/how-can-i-archive-git-branches][stackoverflow.com]].
+
+** assign tag and delete branch
+#+BEGIN_SRC sh
+git tag archive/<branchname> <branchname>
+git branch -D <branchname>
+#+END_SRC
+
+** restore from tag
+list all tags from archive
+: git tag | grep 'archive'
+restore the branch from tag
+: git checkout -b <branchname> archive/<branchname>
+
+** archive many branches
+#+BEGIN_SRC sh
+#!/usr/bin/env bash
+
+set -eux
+
+while read -r branch
+do
+  tag=$(echo "$branch" | sed -e 's/ARCHIVE/archive/')
+  git tag $tag $branch
+  git branch -D $branch
+done < <(git branch | grep "ARCHIVE")
+#+END_SRC
 
 * fixup & autosquash
 
