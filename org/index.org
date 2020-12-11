@@ -8,7 +8,7 @@
 [[file:dev/git.org][git]], [[file:dev/github.org][GitHub]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]],
 
 * ops
-[[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], [[file:ops/pulumi.org][pulumi]]
+[[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]]
 
 * lang
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]

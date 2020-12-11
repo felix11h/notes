@@ -1,0 +1,24 @@
+
+* set up a Python environment with conda and poetry
+
+** install Python using conda
+: conda create -c conda-forge python=3.9 -n py39
+
+** activate conda env
+: conda activate py39
+
+** change dir to a poetry project
+or create via ~poetry init~
+
+** create poetry env
+: poetry env use python
+
+** verify python path and virtualenv location
+: poetry env info
+
+** install poetry packages
+: poetry install
+
+** test installation 
+: poetry run python
+: import <newly_installed_package>
