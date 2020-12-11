@@ -13,7 +13,7 @@
 * lang
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]
 
-* toosl
+* tools
 [[file:tools/cypress.org][cypress]],
 
 * opt
