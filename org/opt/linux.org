@@ -3,9 +3,8 @@
 * binary
 
 ** find binary location
-#+BEGIN_SRC 
-which okular
-#+END_SRC
+: which okular
+
 
 
 * files
