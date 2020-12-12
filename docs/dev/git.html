@@ -7,10 +7,10 @@
 <meta name="generator" content="Org-mode">
 <meta name="author" content="fh">
 
-<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<style>
+<link  href="../assets/bootstrap.min.css" rel="stylesheet">
+<script src="../assets/jquery.min.js"></script>
+<script src="../assets/bootstrap.min.js"></script>
+<style type="text/css">
 /* org mode styles on top of twbs */
 
 html {
@@ -177,7 +177,7 @@ figcaption {
     }
 }
 </style>
-<style>body { margin-bottom: 0px; }</style><script>
+<style>body { margin-bottom: 0px; }</style><script type="text/javascript">
 $(function() {
     'use strict';
 
@@ -191,42 +191,7 @@ $(function() {
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
-<div id="text-table-of-contents" class="bs-docs-sidebar">
-<ul class="nav">
-<li><a href="#sec-">general</a>
-<ul class="nav">
-<li><a href="#sec-">Change user and email of commit</a></li>
-<li><a href="#sec-">log of subdirectory</a></li>
-<li><a href="#sec-">ignore file mode (chmod) changes</a></li>
-</ul>
-</li>
-<li><a href="#sec-">files</a>
-<ul class="nav">
-<li><a href="#sec-">revert single file</a></li>
-</ul>
-</li>
-<li><a href="#sec-">modifying history</a>
-<ul class="nav">
-<li><a href="#sec-">undo commit</a></li>
-</ul>
-</li>
-<li><a href="#sec-">fixup &amp; autosquash</a></li>
-<li><a href="#sec-">merge</a>
-<ul class="nav">
-<li><a href="#sec-">merge git repository as subdirectory</a></li>
-<li><a href="#sec-">merge git repository as subdirectory</a></li>
-</ul>
-</li>
-<li><a href="#sec-">global repository modifications</a>
-<ul class="nav">
-<li><a href="#sec-">"push down" repository contents into a subfolder</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-</div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
+<div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
 <h2 id="sec-">general</h2>
 <div class="outline-text-2" id="text-">
@@ -235,6 +200,7 @@ $(function() {
 <div class="outline-text-3" id="text-">
 <pre class="example">
 git
+
 </pre>
 </div>
 </div>
@@ -244,6 +210,7 @@ git
 <div class="outline-text-3" id="text-">
 <pre class="example">
 git log -- path/to/subdir
+
 </pre>
 </div>
 </div>
@@ -253,6 +220,7 @@ git log -- path/to/subdir
 <div class="outline-text-3" id="text-">
 <pre class="example">
 git config core.fileMode false
+
 </pre>
 </div>
 </div>
@@ -266,6 +234,7 @@ git config core.fileMode false
 <div class="outline-text-3" id="text-">
 <pre class="example">
 git checkout HEAD -- my-file.txt
+
 </pre>
 <p>
 <i>Note: <code>--</code> basically means treat every argument after this point as a file name.</i><br >
@@ -285,6 +254,7 @@ keeping file changes<br >
 </p>
 <pre class="example">
 git reset --soft HEAD~1
+
 </pre>
 
 <p>
@@ -292,11 +262,72 @@ discard file changes<br >
 </p>
 <pre class="example">
 git reset --hard HEAD~1
+
 </pre>
 </div>
 </div>
 </div>
 
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">archive branches</h2>
+<div class="outline-text-2" id="text-">
+<p>
+to archive branches, use tags. see also <a href="https://stackoverflow.com/questions/1307114/how-can-i-archive-git-branches">stackoverflow.com</a>.<br >
+</p>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">assign tag and delete branch</h3>
+<div class="outline-text-3" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-sh">git tag archive/&lt;branchname&gt; &lt;branchname&gt;
+git branch -D &lt;branchname&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">restore from tag</h3>
+<div class="outline-text-3" id="text-">
+<p>
+list all tags from archive<br >
+</p>
+<pre class="example">
+git tag | grep 'archive'
+
+</pre>
+<p>
+restore the branch from tag<br >
+</p>
+<pre class="example">
+git checkout -b &lt;branchname&gt; archive/&lt;branchname&gt;
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">archive many branches</h3>
+<div class="outline-text-3" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #586e75; font-style: italic;">#</span><span style="color: #657b83; font-style: italic;">!/usr/bin/</span><span style="color: #859900;">env</span><span style="color: #657b83; font-style: italic;"> bash</span>
+
+<span style="color: #6c71c4;">set</span> -eux
+
+<span style="color: #859900;">while </span><span style="color: #6c71c4;">read</span> -r branch
+<span style="color: #859900;">do</span>
+  <span style="color: #b58900;">tag</span>=$(<span style="color: #839496;">echo</span> <span style="color: #2aa198;">"$branch"</span> | sed -e <span style="color: #2aa198;">'s/ARCHIVE/archive/'</span>)
+  git tag $<span style="color: #b58900;">tag</span> $<span style="color: #b58900;">branch</span>
+  git branch -D $<span style="color: #b58900;">branch</span>
+<span style="color: #859900;">done</span> &lt; &lt;(git branch | grep <span style="color: #2aa198;">"ARCHIVE"</span>)
+</pre>
+</div>
+</div>
+</div>
+</div>
 
 <div id="outline-container-sec-" class="outline-2">
 <h2 id="sec-">fixup &amp; autosquash</h2>
@@ -356,6 +387,7 @@ where <code>PREFIX</code> is adjusted to relative path within <code>~/projB</cod
 
 <pre class="example">
 git pull path/to/A
+
 </pre>
 </div>
 </div>
@@ -381,6 +413,48 @@ git pull path/to/A
 <h3 id="sec-">"push down" repository contents into a subfolder</h3>
 </div>
 </div>
+</div><div class="col-md-3"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-">general</a>
+<ul class="nav">
+<li><a href="#sec-">Change user and email of commit</a></li>
+<li><a href="#sec-">log of subdirectory</a></li>
+<li><a href="#sec-">ignore file mode (chmod) changes</a></li>
+</ul>
+</li>
+<li><a href="#sec-">files</a>
+<ul class="nav">
+<li><a href="#sec-">revert single file</a></li>
+</ul>
+</li>
+<li><a href="#sec-">modifying history</a>
+<ul class="nav">
+<li><a href="#sec-">undo commit</a></li>
+</ul>
+</li>
+<li><a href="#sec-">archive branches</a>
+<ul class="nav">
+<li><a href="#sec-">assign tag and delete branch</a></li>
+<li><a href="#sec-">restore from tag</a></li>
+<li><a href="#sec-">archive many branches</a></li>
+</ul>
+</li>
+<li><a href="#sec-">fixup &amp; autosquash</a></li>
+<li><a href="#sec-">merge</a>
+<ul class="nav">
+<li><a href="#sec-">merge git repository as subdirectory</a></li>
+<li><a href="#sec-">merge git repository as subdirectory</a></li>
+</ul>
+</li>
+<li><a href="#sec-">global repository modifications</a>
+<ul class="nav">
+<li><a href="#sec-">"push down" repository contents into a subfolder</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
 </div></div></div>
 </body>
 </html>

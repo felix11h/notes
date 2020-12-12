@@ -193,31 +193,92 @@ $(function() {
 <div id="content" class="container">
 <div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">Angular vs React vs Vue</h2>
+<h2 id="sec-">set up a Python environment with conda and poetry</h2>
 <div class="outline-text-2" id="text-">
-<p>
-from <a href="https://www.reddit.com/r/node/comments/ikew02/angular_vs_react_vs_vue_which_front_end_framework/">r/node</a>:<br >
-</p>
+</div><div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">install Python using conda</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+conda create -c conda-forge python=3.9 -n py39
 
-<blockquote>
-<p>
-Angular - heavy-handed, but if you don’t need to go too far off the rails it can make a decent SPA<br >
-</p>
+</pre>
+</div>
+</div>
 
-<p>
-React - more lightweight than Angular, allows for a more simple development process if you wouldn’t benefit from the exact structure of Angular<br >
-</p>
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">activate conda env</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+conda activate py39
 
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">change dir to a poetry project</h3>
+<div class="outline-text-3" id="text-">
 <p>
-Vue - the most lightweight, components are even more self-contained than in the other solutions which can be great for reusability<br >
+or create via <code>poetry init</code><br >
 </p>
-</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">create poetry env</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+poetry env use python
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">verify python path and virtualenv location</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+poetry env info
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">install poetry packages</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+poetry install
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">test installation</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+poetry run python
+import &lt;newly_installed_package&gt;
+
+</pre>
+</div>
 </div>
 </div>
 </div><div class="col-md-3"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">Angular vs React vs Vue</a></li>
+<li><a href="#sec-">set up a Python environment with conda and poetry</a>
+<ul class="nav">
+<li><a href="#sec-">install Python using conda</a></li>
+<li><a href="#sec-">activate conda env</a></li>
+<li><a href="#sec-">change dir to a poetry project</a></li>
+<li><a href="#sec-">create poetry env</a></li>
+<li><a href="#sec-">verify python path and virtualenv location</a></li>
+<li><a href="#sec-">install poetry packages</a></li>
+<li><a href="#sec-">test installation</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>

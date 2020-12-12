@@ -7,10 +7,10 @@
 <meta name="generator" content="Org-mode">
 <meta name="author" content="fh">
 
-<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<style>
+<link  href="../assets/bootstrap.min.css" rel="stylesheet">
+<script src="../assets/jquery.min.js"></script>
+<script src="../assets/bootstrap.min.js"></script>
+<style type="text/css">
 /* org mode styles on top of twbs */
 
 html {
@@ -177,7 +177,7 @@ figcaption {
     }
 }
 </style>
-<style>body { margin-bottom: 0px; }</style><script>
+<style>body { margin-bottom: 0px; }</style><script type="text/javascript">
 $(function() {
     'use strict';
 
@@ -191,20 +191,7 @@ $(function() {
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
-<div id="text-table-of-contents" class="bs-docs-sidebar">
-<ul class="nav">
-<li><a href="#sec-"><code>ignoreChanges</code></a></li>
-<li><a href="#sec-">OnCreateResource hooks</a>
-<ul class="nav">
-<li><a href="#sec-">1. Use dynamic providers/resources</a></li>
-<li><a href="#sec-">2. Using CrossGuard</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</nav>
-</div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
+<div class="row"><div class="col-md-9"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
 <h2 id="sec-"><code>ignoreChanges</code></h2>
 <div class="outline-text-2" id="text-">
@@ -303,10 +290,24 @@ With a CrossGuard <code>ResourceValidationPolicy</code>, see for example  <a hre
 </p>
 <pre class="example">
 pulumi up --policy-pack path-to-policy-code/
+
 </pre>
 </div>
 </div>
 </div>
+</div><div class="col-md-3"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-"><code>ignoreChanges</code></a></li>
+<li><a href="#sec-">OnCreateResource hooks</a>
+<ul class="nav">
+<li><a href="#sec-">1. Use dynamic providers/resources</a></li>
+<li><a href="#sec-">2. Using CrossGuard</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
 </div></div></div>
 </body>
 </html>

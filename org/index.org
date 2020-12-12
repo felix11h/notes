@@ -1,14 +1,14 @@
 #+SETUPFILE: ../templates/index_config.org
 
 
-[[file:notepad.org][notepad]], [[file:sort.org][sort]]
+[[file:scratch.org][scratch]]
 
 
 * dev
-[[file:dev/git.org][git]], [[file:dev/github.org][GitHub]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]],
+[[file:dev/git.org][git]], [[file:dev/github.org][github]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]],
 
 * ops
-[[file:ops/docker.org][docker]], [[file:ops/heroku.org][Heroku]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]]
+[[file:ops/docker.org][docker]], [[file:ops/heroku.org][heroku]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]]
 
 * lang
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]
