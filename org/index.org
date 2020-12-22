@@ -5,7 +5,7 @@
 
 
 * dev
-[[file:dev/git.org][git]], [[file:dev/github.org][github]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]],
+[[file:dev/git.org][git]], [[file:dev/github.org][github]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]], [[file:dev/openapi.org][openapi]]
 
 * ops
 [[file:ops/docker.org][docker]], [[file:ops/heroku.org][heroku]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]]
@@ -17,7 +17,7 @@
 [[file:tools/cypress.org][cypress]],
 
 * opt
-[[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]]
+[[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/emacs.org][emacs]], [[file:opt/rsync.org][rsync]], [[file:opt/vscode.org][vscode]]
 
 * org
 [[file:org/agile.org][agile]]

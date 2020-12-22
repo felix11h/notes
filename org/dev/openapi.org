@@ -1,0 +1,3 @@
+
+* oneOf, anyOf, allOf, not
+[[https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/][swagger.io/docs]]
