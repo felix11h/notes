@@ -7,6 +7,9 @@ from [[https://serverfault.com/questions/607689/can-rsync-display-current-averag
 Yes. Starting with rsync version 3.1.0 the ~--info=progress2~ argument will give you progress on the entire transfer, including speed of the entire transfer.
 #+END_QUOTE
 
+* grep for deletions
+: rsync ... | grep -E '^deleting|[^/]$|^$'
+
 
 * [to sort]
 

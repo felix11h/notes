@@ -1,0 +1,5 @@
+
+* Updating the base conda environment
+#+BEGIN_SRC 
+conda update -n base -c defaults conda
+#+END_SRC
