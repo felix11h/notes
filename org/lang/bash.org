@@ -1,5 +1,11 @@
 
 
+* date timestamp
+#+BEGIN_SRC sh
+DATE=`date "+%Y-%m-%d"`
+#+END_SRC
+
+
 * get last directory in path
 
 #+BEGIN_SRC sh

@@ -193,9 +193,10 @@ $(function() {
 <div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">org-publish</a>
+<li><a href="#sec-">backup linux home folder</a>
 <ul class="nav">
-<li><a href="#sec-">force rebuild sites</a></li>
+<li><a href="#sec-">backup to tar</a></li>
+<li><a href="#sec-">backup <code>/home/fh/</code> with attributes</a></li>
 </ul>
 </li>
 </ul>
@@ -203,17 +204,54 @@ $(function() {
 </nav>
 </div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">org-publish</h2>
+<h2 id="sec-">backup linux home folder</h2>
 <div class="outline-text-2" id="text-">
 </div><div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">force rebuild sites</h3>
+<h3 id="sec-">backup to tar</h3>
 <div class="outline-text-3" id="text-">
 <pre class="example">
-C-u M-x org-publish
+time tar -cvzf 2019-08-28.tar.gz 2019-08-28/
 </pre>
-<p>
-from <a href="https://stackoverflow.com/questions/21258769/using-emacs-org-mode-how-to-publish-the-unchanged-files-in-a-project">stackoverflow.com</a>.<br >
-</p>
+
+
+<pre class="example">
+tar -xvzf compress.tgz -C /media/fh/F834F05534F01878/Users/fh/home
+</pre>
+
+<pre class="example">
+tar -tzf 2017-06-19_titan_\[attributes\].tar.gz | grep "SONG0"
+</pre>
+
+
+<pre class="example">
+tar -czf /media/../compress.tar.gz -C /media/../source/ compress_folder/
+</pre>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">backup <code>/home/fh/</code> with attributes</h3>
+<div class="outline-text-3" id="text-">
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #586e75; font-style: italic;">#</span><span style="color: #657b83; font-style: italic;">!/bin/</span><span style="color: #859900;">bash</span>
+
+<span style="color: #b58900;">DEST</span>=<span style="color: #2aa198;">"/media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/"</span>
+<span style="color: #b58900;">DATE</span>=<span style="color: #2aa198;">"2020-12-08"</span>
+
+mkdir -p $<span style="color: #b58900;">DEST</span>$<span style="color: #b58900;">DATE</span><span style="color: #2aa198;">"_titan-16.04_[attributes]"</span>
+
+<span style="color: #859900;">time</span> tar -czf  /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04.tar.gz -C /home/ fh/
+
+cp -r --attributes-only /home/fh /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes]/fh
+
+<span style="color: #859900;">time</span> tar -czf /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes].tar.gz -C /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/ 2020-12-08_titan-16.04_[attributes]
+
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">rm -r /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes]</span>
+</pre>
+</div>
 </div>
 </div>
 </div>

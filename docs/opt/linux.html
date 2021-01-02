@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
-<meta name="author" content="fh">
 
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -203,7 +202,8 @@ $(function() {
 <ul class="nav">
 <li><a href="#sec-">diff</a></li>
 <li><a href="#sec-">find large folders</a></li>
-<li><a href="#sec-">find a remove</a></li>
+<li><a href="#sec-">find and remove</a></li>
+<li><a href="#sec-">find date of most recent file in folder</a></li>
 </ul>
 </li>
 <li><a href="#sec-">devices</a>
@@ -257,8 +257,9 @@ ls -l --block-size=M
 </div>
 </div>
 
+
 <div id="outline-container-sec-" class="outline-3">
-<h3 id="sec-">find a remove</h3>
+<h3 id="sec-">find and remove</h3>
 <div class="outline-text-3" id="text-">
 <pre class="example">
 find ./*/builds/*/results -type f -name '*' -exec rm {} +
@@ -271,8 +272,16 @@ find . -type d -name builds -exec rm -rf {} +
 </pre>
 </div>
 </div>
-</div>
 
+<div id="outline-container-sec-" class="outline-3">
+<h3 id="sec-">find date of most recent file in folder</h3>
+<div class="outline-text-3" id="text-">
+<pre class="example">
+find /path -printf '%T+ %p\n' | sort -r | head
+</pre>
+</div>
+</div>
+</div>
 
 
 <div id="outline-container-sec-" class="outline-2">
