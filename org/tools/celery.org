@@ -1,0 +1,4 @@
+
+* resources
+
+learning material [[https://www.distributedpython.com/][distributedpython.com]]

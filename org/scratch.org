@@ -47,7 +47,7 @@ course [[https://cloudacademy.com/learning-paths/building-and-deploying-a-cloud-
 https://medium.com/@giltayar/testing-your-frontend-code-part-i-introduction-7e307eac4446
 
 
-
+Progressive JPEG [[https://www.liquidweb.com/kb/what-is-a-progressive-jpeg/][liquidweb.com]]
 
 * posts
 - dataclass json schema validation

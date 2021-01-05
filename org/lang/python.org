@@ -17,6 +17,12 @@
 | assertNotIsInstance(a, b) | not isinstance(a, b) |    3.2 |
 
 
+** enum
+
+#+BEGIN_SRC 
+
+#+END_SRC
+
 
 ** marshmallow 
 
