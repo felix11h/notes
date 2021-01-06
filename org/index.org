@@ -17,7 +17,7 @@
 [[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], 
 
 * opt
-[[file:opt/backup.org][backup]], [[file:opt/emacs.org][emacs]], [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/rsync.org][rsync]], [[file:opt/vscode.org][vscode]], [[file:opt/wmctrl.org][wmctrl]]
+[[file:opt/backup.org][backup]], [[file:opt/emacs.org][emacs]], [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/rename.org][rename]], [[file:opt/rsync.org][rsync]], [[file:opt/vscode.org][vscode]], [[file:opt/wmctrl.org][wmctrl]]
 
 * org
 [[file:org/agile.org][agile]]

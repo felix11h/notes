@@ -236,20 +236,20 @@ tar -czf /media/../compress.tar.gz -C /media/../source/ compress_folder/
 <div class="outline-text-3" id="text-">
 <div class="org-src-container">
 
-<pre class="src src-sh"><span style="color: #465a61; font-style: italic;">#</span><span style="color: #52676f; font-style: italic;">!/bin/</span><span style="color: #728a05;">bash</span>
+<pre class="src src-sh"><span style="color: #586e75; font-style: italic;">#</span><span style="color: #657b83; font-style: italic;">!/bin/</span><span style="color: #859900;">bash</span>
 
-<span style="color: #a57705;">DEST</span>=<span style="color: #259185;">"/media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/"</span>
-<span style="color: #a57705;">DATE</span>=<span style="color: #259185;">"2020-12-08"</span>
+<span style="color: #b58900;">DEST</span>=<span style="color: #2aa198;">"/media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/"</span>
+<span style="color: #b58900;">DATE</span>=<span style="color: #2aa198;">"2020-12-08"</span>
 
-mkdir -p $<span style="color: #a57705;">DEST</span>$<span style="color: #a57705;">DATE</span><span style="color: #259185;">"_titan-16.04_[attributes]"</span>
+mkdir -p $<span style="color: #b58900;">DEST</span>$<span style="color: #b58900;">DATE</span><span style="color: #2aa198;">"_titan-16.04_[attributes]"</span>
 
-<span style="color: #5859b7;">time</span> tar -czf  /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04.tar.gz -C /home/ fh/
+<span style="color: #859900;">time</span> tar -czf  /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04.tar.gz -C /home/ fh/
 
 cp -r --attributes-only /home/fh /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes]/fh
 
-<span style="color: #5859b7;">time</span> tar -czf /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes].tar.gz -C /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/ 2020-12-08_titan-16.04_[attributes]
+<span style="color: #859900;">time</span> tar -czf /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes].tar.gz -C /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/ 2020-12-08_titan-16.04_[attributes]
 
-<span style="color: #465a61; font-style: italic;"># </span><span style="color: #52676f; font-style: italic;">rm -r /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes]</span>
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">rm -r /media/fh/18e27f38-eaa8-43c7-81e9-b60d1c84c086/backup/2020-12-08_titan-16.04_[attributes]</span>
 </pre>
 </div>
 </div>
