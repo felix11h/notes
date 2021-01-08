@@ -193,77 +193,17 @@ $(function() {
 <div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">date timestamp</a></li>
-<li><a href="#sec-">get last directory in path</a></li>
-<li><a href="#sec-">cp path/filenames</a></li>
+<li><a href="#sec-">find the class of the window to activate</a></li>
 </ul>
 </div>
 </nav>
 </div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">date timestamp</h2>
+<h2 id="sec-">find the class of the window to activate</h2>
 <div class="outline-text-2" id="text-">
-<div class="org-src-container">
-
-<pre class="src src-sh"><span style="color: #b58900;">DATE</span>=<span style="color: #839496;">`date "+%Y-%m-%d"`</span>
+<pre class="example">
+wmctrl -lx
 </pre>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">get last directory in path</h2>
-<div class="outline-text-2" id="text-">
-<div class="org-src-container">
-
-<pre class="src src-sh"><span style="color: #b58900;">PTHVAR</span>=<span style="color: #2aa198;">"/path/to/folder"</span>
-<span style="color: #b58900;">LSTFLDR</span>=$( basename $<span style="color: #b58900;">PTHVAR</span>)
-
-<span style="color: #6c71c4;">echo</span> $<span style="color: #b58900;">LSTFLDR</span>
-</pre>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">cp path/filenames</h2>
-<div class="outline-text-2" id="text-">
-<p>
-#!/bin/sh<br >
-</p>
-
-
-<p>
-mkdir -p output-dir<br >
-rm -rf output-dir/*<br >
-</p>
-
-<p>
-cp -r ./test-dir-01 output-dir/<br >
-</p>
-
-
-
-<p>
-mkdir -p output-dir<br >
-rm -rf output-dir/*<br >
-</p>
-
-<p>
-mkdir tmp_dest-dir<br >
-cd tmp_dest-dir<br >
-</p>
-
-<p>
-cp -r ../test-dir-01 ../output-dir/<br >
-</p>
-
-<p>
-cd ../<br >
-rm -rf tmp_dest-dir<br >
-</p>
 </div>
 </div>
 </div></div></div>

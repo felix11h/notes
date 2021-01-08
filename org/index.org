@@ -14,10 +14,10 @@
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]
 
 * tools
-[[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]],
+[[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], 
 
 * opt
-[[file:opt/backup.org][backup]], [[file:opt/emacs.org][emacs]], [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/rsync.org][rsync]], [[file:opt/sed.org][sed]], [[file:opt/vscode.org][vscode]]
+[[file:opt/backup.org][backup]], [[file:opt/emacs.org][emacs]], [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/rename.org][rename]], [[file:opt/rsync.org][rsync]], [[file:opt/sed.org][sed]], [[file:opt/vscode.org][vscode]], [[file:opt/wmctrl.org][wmctrl]]
 
 * org
 [[file:org/agile.org][agile]]
