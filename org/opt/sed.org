@@ -1,0 +1,3 @@
+
+* resources
+comprehensive tutorial: [[https://www.grymoire.com/Unix/Sed.html][grymoire.com]]

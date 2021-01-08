@@ -22,3 +22,7 @@ or create via ~poetry init~
 ** test installation 
 : poetry run python
 : import <newly_installed_package>
+
+
+
+* 
