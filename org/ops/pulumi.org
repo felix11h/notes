@@ -12,6 +12,11 @@ res = MyResource("res",
 #+END_SRC
 
 
+* adding secrets to config
+#+BEGIN_SRC 
+pulumi config set secrets:SSH_KEY --secret < PATH_TO_KEY
+#+END_SRC
+
 
 * OnCreateResource hooks
 
