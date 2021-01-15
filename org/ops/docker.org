@@ -3,3 +3,7 @@ Docker stop and remove
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 #+END_SRC
+
+
+* tmpfs
+The ~--tmpfs~ flag sets up a file system in memory, allowing non-persistent, very fast acting volumes, [[https://docs.docker.com/storage/tmpfs/][docs.docker.com]].

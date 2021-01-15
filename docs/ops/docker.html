@@ -190,7 +190,14 @@ $(function() {
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-3 col-md-push-9"></div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
+<div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-">tmpfs</a></li>
+</ul>
+</div>
+</nav>
+</div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
 <p>
 Docker stop and remove<br >
 </p>
@@ -198,6 +205,16 @@ Docker stop and remove<br >
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 </pre>
+
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">tmpfs</h2>
+<div class="outline-text-2" id="text-">
+<p>
+The <code>--tmpfs</code> flag sets up a file system in memory, allowing non-persistent, very fast acting volumes, <a href="https://docs.docker.com/storage/tmpfs/">docs.docker.com</a>.<br >
+</p>
+</div>
+</div>
 </div></div></div>
 </body>
 </html>

@@ -194,6 +194,7 @@ $(function() {
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
 <li><a href="#sec-"><code>ignoreChanges</code></a></li>
+<li><a href="#sec-">adding secrets to config</a></li>
 <li><a href="#sec-">OnCreateResource hooks</a>
 <ul class="nav">
 <li><a href="#sec-">1. Use dynamic providers/resources</a></li>
@@ -217,14 +218,23 @@ For instance, in this example, the resource’s prop property will have its valu
 
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #b58900;">res</span> = MyResource(<span style="color: #2aa198;">"res"</span>,
-    prop=<span style="color: #2aa198;">"new-value"</span>,
-    opts=ResourceOptions(ignore_changes=[<span style="color: #2aa198;">"prop"</span>]))
+<pre class="src src-python"><span style="color: #a57705;">res</span> = MyResource(<span style="color: #259185;">"res"</span>,
+    prop=<span style="color: #259185;">"new-value"</span>,
+    opts=ResourceOptions(ignore_changes=[<span style="color: #259185;">"prop"</span>]))
 </pre>
 </div>
 </div>
 </div>
 
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">adding secrets to config</h2>
+<div class="outline-text-2" id="text-">
+<pre class="example">
+pulumi config set secrets:SSH_KEY --secret &lt; PATH_TO_KEY
+</pre>
+</div>
+</div>
 
 
 <div id="outline-container-sec-" class="outline-2">
@@ -253,25 +263,25 @@ Example:<br >
 
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">from</span> typing <span style="color: #859900;">import</span> Optional, Any
-<span style="color: #859900;">from</span> uuid <span style="color: #859900;">import</span> uuid4
-<span style="color: #859900;">import</span> pulumi
-<span style="color: #859900;">from</span> pulumi <span style="color: #859900;">import</span> dynamic
-<span style="color: #859900;">class</span> <span style="color: #b58900;">OnCreateWarningProvider</span>(dynamic.ResourceProvider):
-    <span style="color: #b58900;">warning_printed</span> = <span style="color: #6c71c4;">False</span>
-    <span style="color: #859900;">def</span> <span style="color: #268bd2;">print_warning</span>(<span style="color: #859900;">self</span>, message):
-        <span style="color: #859900;">if</span> <span style="color: #859900;">not</span> <span style="color: #859900;">self</span>.warning_printed:
+<pre class="src src-python"><span style="color: #728a05;">from</span> typing <span style="color: #728a05;">import</span> Optional, Any
+<span style="color: #728a05;">from</span> uuid <span style="color: #728a05;">import</span> uuid4
+<span style="color: #728a05;">import</span> pulumi
+<span style="color: #728a05;">from</span> pulumi <span style="color: #728a05;">import</span> dynamic
+<span style="color: #728a05;">class</span> <span style="color: #a57705;">OnCreateWarningProvider</span>(dynamic.ResourceProvider):
+    <span style="color: #a57705;">warning_printed</span> = <span style="color: #5859b7;">False</span>
+    <span style="color: #728a05;">def</span> <span style="color: #2075c7;">print_warning</span>(<span style="color: #728a05;">self</span>, message):
+        <span style="color: #728a05;">if</span> <span style="color: #728a05;">not</span> <span style="color: #728a05;">self</span>.warning_printed:
             pulumi.warn(message)
-            <span style="color: #b58900;">OnCreateWarningProvider.warning_printed</span> = <span style="color: #6c71c4;">True</span>
-    <span style="color: #859900;">def</span> <span style="color: #268bd2;">create</span>(<span style="color: #859900;">self</span>, inputs: Any):
-        <span style="color: #859900;">self</span>.print_warning(inputs[<span style="color: #2aa198;">'message'</span>])
-        <span style="color: #859900;">return</span> dynamic.CreateResult(id_=uuid4().<span style="color: #6c71c4;">hex</span>, outs={})
-<span style="color: #859900;">class</span> <span style="color: #b58900;">OnCreateWarning</span>(dynamic.Resource):
-    <span style="color: #859900;">def</span> <span style="color: #268bd2;">__init__</span>(<span style="color: #859900;">self</span>, name: <span style="color: #6c71c4;">str</span>, message: <span style="color: #6c71c4;">str</span>, opts: Optional[pulumi.ResourceOptions] = <span style="color: #6c71c4;">None</span>):
-        <span style="color: #6c71c4;">super</span>().__init__(
+            <span style="color: #a57705;">OnCreateWarningProvider.warning_printed</span> = <span style="color: #5859b7;">True</span>
+    <span style="color: #728a05;">def</span> <span style="color: #2075c7;">create</span>(<span style="color: #728a05;">self</span>, inputs: Any):
+        <span style="color: #728a05;">self</span>.print_warning(inputs[<span style="color: #259185;">'message'</span>])
+        <span style="color: #728a05;">return</span> dynamic.CreateResult(id_=uuid4().<span style="color: #5859b7;">hex</span>, outs={})
+<span style="color: #728a05;">class</span> <span style="color: #a57705;">OnCreateWarning</span>(dynamic.Resource):
+    <span style="color: #728a05;">def</span> <span style="color: #2075c7;">__init__</span>(<span style="color: #728a05;">self</span>, name: <span style="color: #5859b7;">str</span>, message: <span style="color: #5859b7;">str</span>, opts: Optional[pulumi.ResourceOptions] = <span style="color: #5859b7;">None</span>):
+        <span style="color: #5859b7;">super</span>().__init__(
             OnCreateWarningProvider(),
             name,
-            {<span style="color: #2aa198;">'message'</span>: message},
+            {<span style="color: #259185;">'message'</span>: message},
             opts=opts
         )
 </pre>
@@ -284,8 +294,8 @@ which gets called by<br >
 <div class="org-src-container">
 
 <pre class="src src-python">messaging.OnCreateWarning(
-    name=f<span style="color: #2aa198;">"on-create-warning-{resource_name}"</span>,
-    message=<span style="color: #2aa198;">"Resource was created!"</span>,
+    name=f<span style="color: #259185;">"on-create-warning-{resource_name}"</span>,
+    message=<span style="color: #259185;">"Resource was created!"</span>,
     opts=pulumi.ResourceOptions(depends_on=[resource]),
 )
 </pre>
