@@ -1,0 +1,5 @@
+
+* don't allow execution of post installation scripts (vulnerability)
+#+BEGIN_SRC 
+npm config set ignore-scripts true
+#+END_SRC

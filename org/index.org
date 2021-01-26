@@ -8,13 +8,13 @@
 [[file:dev/concurrency.org][concurrency]], [[file:dev/git.org][git]], [[file:dev/github.org][github]], [[file:dev/fonts.org][fonts]], [[file:dev/frontend.org][frontend]], [[file:dev/openapi.org][openapi]], 
 
 * ops
-[[file:ops/conda.org][conda]], [[file:ops/docker.org][docker]], [[file:ops/heroku.org][heroku]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]]
+[[file:ops/conda.org][conda]], [[file:ops/docker.org][docker]], [[file:ops/heroku.org][heroku]], [[file:ops/npm.org][npm]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]]
 
 * lang
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]
 
 * tools
-[[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], 
+[[file:tools/angular.org][angular]], [[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], [[file:tools/deno.org][deno]], [[file:tools/prettier.org][prettier]]
 
 * opt
 [[file:opt/backup.org][backup]], [[file:opt/emacs.org][emacs]], [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/rename.org][rename]], [[file:opt/rsync.org][rsync]], [[file:opt/sed.org][sed]], [[file:opt/vscode.org][vscode]], [[file:opt/wmctrl.org][wmctrl]]

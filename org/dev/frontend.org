@@ -11,3 +11,15 @@ React - more lightweight than Angular, allows for a more simple development proc
 Vue - the most lightweight, components are even more self-contained than in the other solutions which can be great for reusability
 #+END_QUOTE
 
+
+* Jamstack
+https://gridsome.org/docs/jamstack
+
+
+* concepts
+
+** differential loading
+for each browser, always load the smallest javascript bundle based on what features are available in that browser
+
+** lazy loading
+do not (yet) load javascript for components (app features) that are not needed yet

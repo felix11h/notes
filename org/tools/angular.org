@@ -1,0 +1,6 @@
+
+* differential loading
+angular supports differential loading (see [[file:../dev/frontend.org][frontend.org]])
+
+* lazy loading
+angular support lazy loading with webpack (see [[file:../dev/frontend.org][frontend.org]])
