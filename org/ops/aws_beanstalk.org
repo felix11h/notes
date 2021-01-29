@@ -1,0 +1,3 @@
+
+* immutable deployments
+[[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environmentmgmt-updates-immutable.html][docs.aws.amazon.com]]

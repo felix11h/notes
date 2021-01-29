@@ -1,0 +1,9 @@
+
+* concepts
+
+** stateless
+
+* advantages of RESTful (stateless)
+- simple structures
+- straightforward caching possible
+

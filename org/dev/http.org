@@ -1,0 +1,14 @@
+
+* safe und unsafe methods
+An HTTP method is safe if it doesn't alter the state of the server. Examples: 
+ - GET
+ - OPTIONS 
+ - HEAD
+
+See [[https://developer.mozilla.org/en-US/docs/Glossary/safe][developer.mozilla.org/safe]].
+
+
+* idempotent
+An HTTP method is idempotent if an identical request can be made once or several times in a row with the same effect while leaving the server in the same state.
+
+See [[https://developer.mozilla.org/en-US/docs/Glossary/idempotent][developer.mozilla.org/idempotent]].
