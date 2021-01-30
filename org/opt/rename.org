@@ -1,4 +1,7 @@
 
+* resources
+unofficial docs [[http://plasmasturm.org/code/rename/][plasmasturm.org]] (good!)
+
 * counter
 #+BEGIN_SRC 
 $N

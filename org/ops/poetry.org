@@ -2,7 +2,7 @@
 * set up a Python environment with conda and poetry
 
 ** install Python using conda
-: conda create -c conda-forge python=3.9 -n py39
+: conda create python=3.9 -n py39
 
 ** activate conda env
 : conda activate py39
