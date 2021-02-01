@@ -2,8 +2,6 @@
 * backup linux home folder
 
 ** backup to tar
-
-
 : time tar -cvzf 2019-08-28.tar.gz 2019-08-28/
 
 
