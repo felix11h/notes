@@ -193,26 +193,28 @@ $(function() {
 <div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">resources</a></li>
-<li><a href="#sec-">counter</a></li>
+<li><a href="#sec-">backup to tar</a></li>
 </ul>
 </div>
 </nav>
 </div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">resources</h2>
-<div class="outline-text-2" id="text-">
-<p>
-unofficial docs <a href="http://plasmasturm.org/code/rename/">plasmasturm.org</a> (good!)<br >
-</p>
-</div>
-</div>
-
-<div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">counter</h2>
+<h2 id="sec-">backup to tar</h2>
 <div class="outline-text-2" id="text-">
 <pre class="example">
-$N
+time tar -cvzf 2019-08-28.tar.gz 2019-08-28/
+</pre>
+
+<pre class="example">
+tar -xvzf compress.tgz -C /media/fh/F834F05534F01878/Users/fh/home
+</pre>
+
+<pre class="example">
+tar -tzf bar_\[attributes\].tar.gz | grep "foo"
+</pre>
+
+<pre class="example">
+tar -czf /media/../compress.tar.gz -C /media/../source/ compress_folder/
 </pre>
 </div>
 </div>

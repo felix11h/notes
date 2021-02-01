@@ -1,0 +1,36 @@
+
+
+* search in ~attributes.tar.gz~ archives
+to search for a file or folder ~foo~ in ~bar_[attributes].tar.gz~ use
+#+BEGIN_SRC bash
+tar -tzf bar_\[attributes\].tar.gz | grep "foo"
+#+END_SRC
+
+
+* backup linux home w/ attributes
+run with ~sudo~ (why do I need this?):
+#+BEGIN_SRC bash
+#!/bin/bash
+
+SRC="/home/fh"
+DEST=/media/fh/hard_drive/linux_mirror/
+DATE=`date "+%Y-%m-%d"`
+
+sudo -u fh \
+     time tar -czf $DEST/"$DATE"_titan.tar.gz \
+     -C "$(dirname "$SRC")/" "$(basename "$SRC")/"
+
+sudo -u fh \
+     cp -r --attributes-only "$SRC" \
+     $DEST/"$DATE"_titan_[attributes]
+
+sudo -u fh \
+     time tar -czf $DEST/"$DATE"_titan_[attributes].tar.gz \
+     -C "$DEST" "$DATE"_titan_[attributes]
+
+rm -rf $DEST/"$DATE"_titan_[attributes]
+#+END_SRC
+
+
+
+

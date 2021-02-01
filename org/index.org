@@ -16,8 +16,11 @@
 * tools
 [[file:tools/angular.org][angular]], [[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], [[file:tools/deno.org][deno]], [[file:tools/prettier.org][prettier]]
 
+* os
+[[file:os/backup.org][backup]], [[file:os/linux.org][linux]], [[file:os/macos.org][macos]],
+
 * opt
-[[file:opt/backup.org][backup]], [[file:opt/emacs.org][emacs]], [[file:opt/linux.org][linux]], [[file:opt/macos.org][macos]], [[file:opt/rename.org][rename]], [[file:opt/rsync.org][rsync]], [[file:opt/sed.org][sed]], [[file:opt/vscode.org][vscode]], [[file:opt/wmctrl.org][wmctrl]]
+[[file:opt/emacs.org][emacs]], [[file:opt/rename.org][rename]], [[file:opt/rsync.org][rsync]], [[file:opt/sed.org][sed]], [[file:opt/tar.org][tar]], [[file:opt/vscode.org][vscode]], [[file:opt/wmctrl.org][wmctrl]]
 
 * org
 [[file:org/agile.org][agile]]

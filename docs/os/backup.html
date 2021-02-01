@@ -193,27 +193,56 @@ $(function() {
 <div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
-<li><a href="#sec-">resources</a></li>
-<li><a href="#sec-">counter</a></li>
+<li><a href="#sec-">search in <code>attributes.tar.gz</code> archives</a></li>
+<li><a href="#sec-">backup linux home w/ attributes</a></li>
 </ul>
 </div>
 </nav>
 </div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">resources</h2>
+<h2 id="sec-">search in <code>attributes.tar.gz</code> archives</h2>
 <div class="outline-text-2" id="text-">
 <p>
-unofficial docs <a href="http://plasmasturm.org/code/rename/">plasmasturm.org</a> (good!)<br >
+to search for a file or folder <code>foo</code> in <code>bar_[attributes].tar.gz</code> use<br >
 </p>
+<div class="org-src-container">
+
+<pre class="src src-bash">tar -tzf bar_<span style="color: #2aa198;">\[</span>attributes<span style="color: #2aa198;">\]</span>.tar.gz | grep <span style="color: #2aa198;">"foo"</span>
+</pre>
+</div>
 </div>
 </div>
 
+
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-">counter</h2>
+<h2 id="sec-">backup linux home w/ attributes</h2>
 <div class="outline-text-2" id="text-">
-<pre class="example">
-$N
+<p>
+run with <code>sudo</code> (why do I need this?):<br >
+</p>
+<div class="org-src-container">
+
+<pre class="src src-bash"><span style="color: #586e75; font-style: italic;">#</span><span style="color: #657b83; font-style: italic;">!/bin/</span><span style="color: #859900;">bash</span>
+
+<span style="color: #b58900;">SRC</span>=<span style="color: #2aa198;">"/home/fh"</span>
+<span style="color: #b58900;">DEST</span>=/media/fh/hard_drive/linux_mirror/
+<span style="color: #b58900;">DATE</span>=<span style="color: #839496;">`date "+%Y-%m-%d"`</span>
+
+sudo -u fh <span style="color: #2aa198;">\</span>
+     <span style="color: #859900;">time</span> tar -czf $<span style="color: #b58900;">DEST</span>/<span style="color: #2aa198;">"$DATE"</span>_titan.tar.gz <span style="color: #2aa198;">\</span>
+     -C <span style="color: #2aa198;">"$(</span><span style="color: #839496;">dirname</span><span style="color: #2aa198;"> "$SRC")/"</span> <span style="color: #2aa198;">"$(</span><span style="color: #839496;">basename</span><span style="color: #2aa198;"> "$SRC")/"</span>
+
+sudo -u fh <span style="color: #2aa198;">\</span>
+     cp -r --attributes-only <span style="color: #2aa198;">"$SRC"</span> <span style="color: #2aa198;">\</span>
+     $<span style="color: #b58900;">DEST</span>/<span style="color: #2aa198;">"$DATE"</span>_titan_[attributes]
+
+sudo -u fh <span style="color: #2aa198;">\</span>
+     <span style="color: #859900;">time</span> tar -czf $<span style="color: #b58900;">DEST</span>/<span style="color: #2aa198;">"$DATE"</span>_titan_[attributes].tar.gz <span style="color: #2aa198;">\</span>
+     -C <span style="color: #2aa198;">"$DEST"</span> <span style="color: #2aa198;">"$DATE"</span>_titan_[attributes]
+
+rm -rf $<span style="color: #b58900;">DEST</span>/<span style="color: #2aa198;">"$DATE"</span>_titan_[attributes]
 </pre>
+</div>
 </div>
 </div>
 </div></div></div>

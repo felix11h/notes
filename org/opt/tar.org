@@ -1,0 +1,9 @@
+* backup to tar
+
+: time tar -cvzf 2019-08-28.tar.gz 2019-08-28/
+
+: tar -xvzf compress.tgz -C /media/fh/F834F05534F01878/Users/fh/home
+
+: tar -tzf bar_\[attributes\].tar.gz | grep "foo"
+
+: tar -czf /media/../compress.tar.gz -C /media/../source/ compress_folder/
