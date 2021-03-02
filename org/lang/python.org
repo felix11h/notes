@@ -1,4 +1,54 @@
 
+** closures
+
+https://www.programiz.com/python-programming/closure
+
+#+BEGIN_SRC python
+>>> def outside(foo=False):
+...     def inside():
+...             return "foo" if foo else "bar"
+...     return inside
+... 
+>>> in1 = outside()
+>>> in1()
+'bar'
+>>> in1()
+'bar'
+>>> in2 = outside(foo=True)
+>>> in2()
+'foo'
+>>> foo=True
+>>> in1()
+'bar'
+>>> in2()
+'foo'
+>>> def standalone():
+...     return "foo" if foo else "bar"
+... 
+>>> standalone()
+'foo'
+>>> foo=False
+>>> standalone()
+'bar'
+>>> outside.foo = False
+>>> in2()
+'foo'
+>>> in1()
+'bar'
+>>> in1.__closure__
+(<cell at 0x7fc69803ffd0: bool object at 0x1075ea618>,)
+>>> in1.__closure__[0].cell_contents
+False
+>>> in2.__closure__[0].cell_contents
+True
+>>> in2.__closure__[0].cell_contents = False
+>>> in2
+<function outside.<locals>.inside at 0x7fc6b81d0790>
+>>> in2()
+'bar'
+#+END_SRC
+
+
 ** unit tests
 
 | Method                    | Checks that          | New in |

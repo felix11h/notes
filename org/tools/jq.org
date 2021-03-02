@@ -1,0 +1,4 @@
+#+BEGIN_SRC sh
+cat testdata/click.json | jq '.Message|fromjson' 
+#+END_SRC
+
