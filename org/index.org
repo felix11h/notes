@@ -14,7 +14,7 @@
 [[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]
 
 * tools
-[[file:tools/angular.org][angular]], [[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], [[file:tools/deno.org][deno]], [[file:tools/jq.org][jq]], [[file:tools/prettier.org][prettier]]
+[[file:tools/angular.org][angular]], [[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], [[file:tools/deno.org][deno]], [[file:tools/django.org][django]], [[file:tools/jq.org][jq]], [[file:tools/prettier.org][prettier]]
 
 * os
 [[file:os/backup.org][backup]], [[file:os/linux.org][linux]], [[file:os/macos.org][macos]],
