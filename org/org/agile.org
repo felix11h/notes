@@ -1,3 +1,4 @@
 
 https://martinfowler.com/agile.html
 
+planning poker: thunderdome.dev  
