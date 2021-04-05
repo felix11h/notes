@@ -193,6 +193,7 @@ $(function() {
 <div class="row"><div class="col-md-3 col-md-push-9"><nav id="table-of-contents">
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
+<li><a href="#sec-">closures</a></li>
 <li><a href="#sec-">unit tests</a></li>
 <li><a href="#sec-">enum</a></li>
 <li><a href="#sec-">marshmallow</a></li>
@@ -200,6 +201,56 @@ $(function() {
 </div>
 </nav>
 </div><div class="col-md-9 col-md-pull-3"><h1 class="title"></h1>
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">closures</h2>
+<div class="outline-text-2" id="text-">
+<p>
+<a href="https://www.programiz.com/python-programming/closure">https://www.programiz.com/python-programming/closure</a><br >
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #859900;">def</span> <span style="color: #268bd2;">standalone</span>():
+    <span style="color: #859900;">return</span> <span style="color: #2aa198;">"foo"</span> <span style="color: #859900;">if</span> foo <span style="color: #859900;">else</span> <span style="color: #2aa198;">"bar"</span>
+
+standalone() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'foo'</span>
+<span style="color: #b58900;">foo</span>=<span style="color: #6c71c4;">False</span>
+standalone() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'bar'</span>
+
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">closure!</span>
+<span style="color: #859900;">def</span> <span style="color: #268bd2;">outside</span>(foo=<span style="color: #6c71c4;">False</span>):
+    <span style="color: #859900;">def</span> <span style="color: #268bd2;">inside</span>():
+            <span style="color: #859900;">return</span> <span style="color: #2aa198;">"foo"</span> <span style="color: #859900;">if</span> foo <span style="color: #859900;">else</span> <span style="color: #2aa198;">"bar"</span>
+    <span style="color: #859900;">return</span> inside
+
+<span style="color: #b58900;">in1</span> = outside()
+in1()  <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'bar'</span>
+<span style="color: #b58900;">in2</span> = outside(foo=<span style="color: #6c71c4;">True</span>)
+in2() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'foo'</span>
+
+<span style="color: #b58900;">foo</span>=<span style="color: #6c71c4;">True</span>
+in1() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'bar'</span>
+in2() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'foo'</span>
+
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">doesn't work!</span>
+<span style="color: #b58900;">outside.foo</span> = <span style="color: #6c71c4;">False</span>
+in2() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'foo'</span>
+in1() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'bar'</span>
+
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">but this does!</span>
+in1.__closure__ <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">(&lt;cell at 0x7fc69803ffd0: bool object at 0x1075ea618&gt;,)</span>
+
+in1.__closure__[0].cell_contents <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">False</span>
+in2.__closure__[0].cell_contents <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">True</span>
+
+in2.__closure__[0]<span style="color: #b58900;">.cell_contents</span> = <span style="color: #6c71c4;">False</span>
+in2() <span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">'bar'</span>
+</pre>
+</div>
+</div>
+</div>
+
+
 <div id="outline-container-sec-" class="outline-2">
 <h2 id="sec-">unit tests</h2>
 <div class="outline-text-2" id="text-">
@@ -301,11 +352,44 @@ $(function() {
 <div id="outline-container-sec-" class="outline-2">
 <h2 id="sec-">enum</h2>
 <div class="outline-text-2" id="text-">
-<pre class="example">
+<p>
+Auto names in Enums <a href="https://docs.python.org/3/library/enum.html#using-automatic-values">docs.python.org</a>.<br >
+</p>
+<div class="org-src-container">
 
+<pre class="src src-python"><span style="color: #859900;">from</span> enum <span style="color: #859900;">import</span> Enum, auto
+<span style="color: #859900;">class</span> <span style="color: #b58900;">Color</span>(Enum):
+    <span style="color: #b58900;">RED</span> = auto()
+    <span style="color: #b58900;">BLUE</span> = auto()
+    <span style="color: #b58900;">GREEN</span> = auto()
+
+<span style="color: #6c71c4;">list</span>(Color)
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">returns:</span>
+<span style="color: #586e75; font-style: italic;">#   </span><span style="color: #657b83; font-style: italic;">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre>
+</div>
+
+<p>
+Add a <code>AutoName</code> class,<br >
+</p>
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #859900;">class</span> <span style="color: #b58900;">AutoName</span>(Enum):
+    <span style="color: #859900;">def</span> <span style="color: #268bd2;">_generate_next_value_</span>(name, start, count, last_values):
+        <span style="color: #859900;">return</span> name
+
+<span style="color: #859900;">class</span> <span style="color: #b58900;">Ordinal</span>(AutoName):
+    <span style="color: #b58900;">NORTH</span> = auto()
+    <span style="color: #b58900;">SOUTH</span> = auto()    
+
+<span style="color: #6c71c4;">list</span>(Ordinal)
+<span style="color: #586e75; font-style: italic;"># </span><span style="color: #657b83; font-style: italic;">returns:</span>
+<span style="color: #586e75; font-style: italic;">#   </span><span style="color: #657b83; font-style: italic;">&lt;Ordinal.NORTH: 'NORTH'&gt;, &lt;Ordinal.SOUTH: 'SOUTH'&gt;]</span>
 </pre>
 </div>
 </div>
+</div>
+
 
 
 <div id="outline-container-sec-" class="outline-2">

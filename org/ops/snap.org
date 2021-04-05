@@ -1,0 +1,5 @@
+
+* Dealing with upgrades that break things
+⟶ use snap revert, see [[https://askubuntu.com/a/1263653][askubuntu.com/a/1263653]]
+
+
