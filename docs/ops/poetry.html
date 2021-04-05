@@ -204,7 +204,7 @@ $(function() {
 <li><a href="#sec-">test installation</a></li>
 </ul>
 </li>
-<li><a href="#sec-"></a></li>
+<li><a href="#sec-">integrate a locally developed dependency</a></li>
 </ul>
 </div>
 </nav>
@@ -280,7 +280,15 @@ import &lt;newly_installed_package&gt;
 
 
 <div id="outline-container-sec-" class="outline-2">
-<h2 id="sec-"></h2>
+<h2 id="sec-">integrate a locally developed dependency</h2>
+<div class="outline-text-2" id="text-">
+<p>
+in <code>pyproject.toml</code>:<br >
+</p>
+<pre class="example">
+my-package = { path = "../my-package/", develop = true }
+</pre>
+</div>
 </div>
 </div></div></div>
 </body>

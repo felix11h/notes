@@ -25,4 +25,10 @@ or create via ~poetry init~
 
 
 
-* 
+* integrate a locally developed dependency
+in ~pyproject.toml~:
+#+BEGIN_SRC 
+my-package = { path = "../my-package/", develop = true }
+#+END_SRC
+
+
