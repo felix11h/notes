@@ -40,6 +40,23 @@ find . -type d -name builds -exec rm -rf {} +
 : find /path -printf '%T+ %p\n' | sort -r | head
 
 
+* Processes
+#+BEGIN_SRC 
+ps aux
+#+END_SRC
+
+~a~ -- show processes for all users
+~u~ -- display the process's user/owner
+~x~ -- also show processes not attached to a terminal
+
+#+BEGIN_SRC 
+kill <pid> -s <signal>
+#+END_SRC
+Send signal to a process.
+
+Why? ⟶ [[https://github.com/heroku/heroku-buildpack-python/issues/817][github.com/heroku/issues/817]].
+
+
 * devices
 
 ** safely remove drives
