@@ -1,0 +1,12 @@
+
+* aws s3
+list files in aws directory
+#+BEGIN_SRC 
+aws s3 ls s3://...
+#+END_SRC
+
+cp files to or from s3
+#+BEGIN_SRC 
+aws s3 cp [source] [target]
+#+END_SRC
+
