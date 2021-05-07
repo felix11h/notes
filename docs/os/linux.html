@@ -206,6 +206,7 @@ $(function() {
 <li><a href="#sec-">find date of most recent file in folder</a></li>
 </ul>
 </li>
+<li><a href="#sec-">Processes</a></li>
 <li><a href="#sec-">devices</a>
 <ul class="nav">
 <li><a href="#sec-">safely remove drives</a></li>
@@ -280,6 +281,33 @@ find . -type d -name builds -exec rm -rf {} +
 find /path -printf '%T+ %p\n' | sort -r | head
 </pre>
 </div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">Processes</h2>
+<div class="outline-text-2" id="text-">
+<pre class="example">
+ps aux
+</pre>
+
+<p>
+<code>a</code> &#x2013; show processes for all users<br >
+<code>u</code> &#x2013; display the process's user/owner<br >
+<code>x</code> &#x2013; also show processes not attached to a terminal<br >
+</p>
+
+<pre class="example">
+kill &lt;pid&gt; -s &lt;signal&gt;
+</pre>
+<p>
+Send signal to a process.<br >
+</p>
+
+<p>
+Why? ⟶ <a href="https://github.com/heroku/heroku-buildpack-python/issues/817">github.com/heroku/issues/817</a>.<br >
+</p>
 </div>
 </div>
 
