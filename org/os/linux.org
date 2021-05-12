@@ -1,11 +1,8 @@
 
-
 * binary
 
 ** find binary location
 : which okular
-
-
 
 * files
 
