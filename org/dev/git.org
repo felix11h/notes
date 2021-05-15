@@ -25,6 +25,15 @@ keeping file changes
 discard file changes
 : git reset --hard HEAD~1
 
+** change git user name and email for all commits 
+changes every user(!) to the specified name and email
+#+BEGIN_SRC 
+git filter-branch -f --env-filter \
+"GIT_AUTHOR_NAME='Firstname Lastname'; GIT_AUTHOR_EMAIL='address@provider.com'; \
+GIT_COMMITTER_NAME='Firstname Lastname'; GIT_COMMITTER_EMAIL='address@provider.com';" HEAD
+#+END_SRC
+
+
 * archive branches
 
 to archive branches, use tags. see also [[https://stackoverflow.com/questions/1307114/how-can-i-archive-git-branches][stackoverflow.com]].
