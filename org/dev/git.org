@@ -10,6 +10,10 @@
 ** ignore file mode (chmod) changes
 : git config core.fileMode false
 
+** show changed files only
+: git diff --name-only HEAD~1
+
+
 * files
 
 ** revert single file
