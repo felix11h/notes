@@ -1,0 +1,9 @@
+
+* query examples
+
+** select from text field as json
+#+BEGIN_SRC sql
+select id, data::json->'some_key' as some_key
+from my_table
+where (data::json->'some_key'->'some_od')::text::int != 0
+#+END_SRC

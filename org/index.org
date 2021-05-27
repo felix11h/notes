@@ -11,7 +11,7 @@
 [[file:ops/aws_beanstalk.org][aws beanstalk]], [[file:ops/aws_cli.org][aws cli]], [[file:ops/conda.org][conda]], [[file:ops/docker.org][docker]], [[file:ops/heroku.org][heroku]], [[file:ops/npm.org][npm]], [[file:ops/pulumi.org][pulumi]], [[file:ops/poetry.org][poetry]], [[file:ops/snap.org][snap]]
 
 * lang
-[[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/json.org][json]], [[file:lang/python.org][python]], [[file:lang/yaml.org][yaml]]
+[[file:lang/general.org][general]], [[file:lang/bash.org][bash]], [[file:lang/css.org][css]], [[file:lang/html.org][html]], [[file:lang/js.org][js]], [[file:lang/json.org][json]], [[file:lang/python.org][python]], [[file:lang/sql.org][sql]], [[file:lang/yaml.org][yaml]]
 
 * tools
 [[file:tools/angular.org][angular]], [[file:tools/celery.org][celery]], [[file:tools/cypress.org][cypress]], [[file:tools/deno.org][deno]], [[file:tools/django.org][django]], [[file:tools/jq.org][jq]], [[file:tools/prettier.org][prettier]]

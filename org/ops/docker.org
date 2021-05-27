@@ -12,3 +12,8 @@ The ~--tmpfs~ flag sets up a file system in memory, allowing non-persistent, ver
 * ctop
 ~ctop~ is a top-like interface for container metrics, see [[https://github.cobc
 icen/ctop][github.com/ctop]].       
+
+
+* docker cp
+can copy into container
+: docker cp foo.txt mycontainer:/foo.txt
