@@ -2,3 +2,7 @@
 * resources
 
 learning material [[https://www.distributedpython.com/][distributedpython.com]]
+
+
+* see active jobs
+: celery -A <app-name> inspect active

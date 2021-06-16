@@ -1,0 +1,5 @@
+
+* setup aws cli after installation (interactively)
+#+BEGIN_SRC 
+aws configure
+#+END_SRC
