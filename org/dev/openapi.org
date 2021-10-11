@@ -1,3 +1,21 @@
 
 * oneOf, anyOf, allOf, not
 [[https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/][swagger.io/docs]]
+
+
+* analysing diffs in specs
+There is ~openapitools/openapi-diff~. To use, for example, 
+
+#+BEGIN_SRC 
+docker run -v $HOME/src/tmp/specs:/opt/specs openapitools/openapi-diff /opt/specs/old-spec/api.yml /opt/specs/new-spec/api.yml
+#+END_SRC
+
+*Attention* The tool might not yield diffs as it is not able to parse the specs properly.
+
+Alternatively, use
+
+#+BEGIN_SRC 
+docker run -v $HOME/src/tmp/specs:/opt/specs openapitools/openapi-generator-cli generate --config /opt/specs/config.yml -i /opt/specs/new-spec/api.yml -g openapi -o /opt/specs/new-spec/json
+#+END_SRC
+
+and compare using [[http://www.jsondiff.com/][jsondiff.com]].
