@@ -1,0 +1,10 @@
+
+* Starting workflow runs from workflows
+
+#+BEGIN_QUOTE 
+If you would like to trigger a workflow from a workflow run, you can trigger the event using a personal access token. You'll need to create a personal access token and store it as a secret. **_To minimize your GitHub Actions usage costs, ensure that you don't create recursive or unintended workflow runs._** [...]
+#+END_QUOTE
+
+See [[https://docs.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token][docs.github.com]]. 
+
+
