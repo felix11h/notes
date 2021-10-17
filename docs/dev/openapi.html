@@ -194,6 +194,7 @@ $(function() {
 <div id="text-table-of-contents" class="bs-docs-sidebar">
 <ul class="nav">
 <li><a href="#sec-">oneOf, anyOf, allOf, not</a></li>
+<li><a href="#sec-">analysing diffs in specs</a></li>
 </ul>
 </div>
 </nav>
@@ -203,6 +204,36 @@ $(function() {
 <div class="outline-text-2" id="text-">
 <p>
 <a href="https://swagger.io/docs/specification/data-models/oneof-anyof-allof-not/">swagger.io/docs</a><br >
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-" class="outline-2">
+<h2 id="sec-">analysing diffs in specs</h2>
+<div class="outline-text-2" id="text-">
+<p>
+There is <code>openapitools/openapi-diff</code>. To use, for example,<br >
+</p>
+
+<pre class="example">
+docker run -v $HOME/src/tmp/specs:/opt/specs openapitools/openapi-diff /opt/specs/old-spec/api.yml /opt/specs/new-spec/api.yml
+</pre>
+
+<p>
+<b>Attention</b> The tool might not yield diffs as it is not able to parse the specs properly.<br >
+</p>
+
+<p>
+Alternatively, use<br >
+</p>
+
+<pre class="example">
+docker run -v $HOME/src/tmp/specs:/opt/specs openapitools/openapi-generator-cli generate --config /opt/specs/config.yml -i /opt/specs/new-spec/api.yml -g openapi -o /opt/specs/new-spec/json
+</pre>
+
+<p>
+and compare using <a href="http://www.jsondiff.com/">jsondiff.com</a>.<br >
 </p>
 </div>
 </div>
