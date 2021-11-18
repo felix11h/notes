@@ -4,5 +4,5 @@ unofficial docs [[http://plasmasturm.org/code/rename/][plasmasturm.org]] (good!)
 
 * counter
 #+BEGIN_SRC 
-$N
+rename -n -N 01 -e 's/.*/\$N/' *.mkv
 #+END_SRC
