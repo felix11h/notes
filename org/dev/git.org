@@ -69,7 +69,7 @@ done < <(git branch | grep "ARCHIVE")
 #+END_SRC
 
 * fixup & autosquash
-
+: git rebase -i --autosquash origin/master  
 
 * merge
 

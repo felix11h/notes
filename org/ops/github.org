@@ -8,3 +8,9 @@ If you would like to trigger a workflow from a workflow run, you can trigger the
 See [[https://docs.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token][docs.github.com]]. 
 
 
+* Print available environment variables in GitHub Action workflow
+Use the following step
+#+BEGIN_SRC 
+- name: Print available environment vars
+  run: echo {{ toJSON(github) }}
+#+END_SRC
